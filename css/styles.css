@@ -7,8 +7,8 @@ body {
 }
 
 .container {
-  max-width: 1000px;
-  margin: 0 auto 20px;
+  max-width: 1024px;
+  margin: 10px;
   padding: 16px;
 }
 
@@ -22,6 +22,11 @@ body {
   color: #ffffff;
   text-decoration: underline;
 }
+
+.message a:hover {  
+  color: #bbbbbb;      
+  cursor: pointer;     
+}                     
 
 .logo {
   background-color: white;
@@ -53,4 +58,12 @@ body {
   font-weight: bold;
   text-decoration: none;
   margin-bottom: 12px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+.section a:hover {
+  background-color: #3a5140;  /* Mörkare grön */
+  transform: scale(1.05);     /* Liten förstoring */
+  cursor: pointer;
+}
+
