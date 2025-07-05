@@ -1,27 +1,93 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Min första webbsida</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fabriksparken 1</title>
   <style>
     body {
-      font-family: sans-serif;
-      background-color: #f4f4f4;
+      font-family: Verdana, sans-serif;
       margin: 0;
-      padding: 40px;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto 20px;
+      padding: 16px;
       text-align: center;
     }
-    h1 {
-      color: #4D6B57;
+    .message {
+      background-color: #4E4B4B;
+      color: white;
+      border-radius: 15px;
     }
-    p {
-      font-size: 18px;
+    .message a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+    .logo {
+      background-color: white;
+    }
+    .logo img {
+      display: block;
+      height: 435px;
+      width: 100%;
+      max-width: 1024px;
+      margin: 0 auto;
+      border: none;
+    }
+    .section {
+      background-color: #BCD3BA;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .section a {
+      display: inline-block;
+      background-color: #4D6B57;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 6px;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-bottom: 12px;
     }
   </style>
 </head>
 <body>
-  <h1>Välkommen till min webbsida!</h1>
-  <p>Den här sidan är publicerad med GitHub Pages.</p>
+
+  <div class="container message">
+    <p>Vi gör om våra sidor; om länkar är trasiga eller information saknas är vi tacksamma för återkoppling via mejl: 
+      <a href="mailto:info@fabriksparken1.se">info@fabriksparken1.se</a><br>
+      Vänliga hälsningar från styrelsen
+    </p>
+  </div>
+
+  <div class="container logo">
+    <img src="/files/gallery/dist/u/106249/g/images/Logo/Bild_1_logo_innergard_gron2.png" alt="Logotyp på innergården">
+  </div>
+
+  <div class="container section">
+    <a href="#">Nyheter</a>
+    <p>Läs föreningens nyhetsbrev och titta i kalendariet.</p>
+  </div>
+
+  <div class="container section">
+    <a href="#">För boende</a>
+    <p>Här hittar du information om din bostad, passagesystem, parkering, gemensamma utrymmen, felanmälan m.m.</p>
+  </div>
+
+  <div class="container section">
+    <a href="#">Vår förening</a>
+    <p>Läs om vår förening, stadgar, styrelse, ekonomisk förvaltning, viktiga dokument och information till nya medlemmar.</p>
+  </div>
+
+  <div class="container section">
+    <a href="#">För mäklare</a>
+    <p>Här hittar du all information för mäklare.</p>
+  </div>
+
 </body>
 </html>
