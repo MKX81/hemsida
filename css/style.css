@@ -47,7 +47,7 @@ header {
 
 /* Menytitel */
 .menu-title {
-  font-size: 2rem;
+  font-size: 4rem;
   text-align: center;
   font-weight: 700;
   color: #333333; 
@@ -82,7 +82,7 @@ header {
 }
 
 .menu-links a:hover {
-  font-size: 1.3rem;
+  font-size: 2rem;
 }
 
 /* Undvik att innehåll hamnar under headern */
