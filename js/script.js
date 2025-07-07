@@ -16,8 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Visa menyn initialt
   showMenu();
 
-  // Visa menyn vid musrörelse
-  window.addEventListener('mousemove', showMenu);
+  window.addEventListener('mousemove', (e) => {
+  if (e.clientY < 50) {  // Om musen är inom 50px från toppen
+    showMenu();
+  }
+});
 
   // --- INFO-BANNER: klicka för att stänga ---
   const infoBanner = document.querySelector(".info-banner");
