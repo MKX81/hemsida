@@ -167,7 +167,7 @@ main {
   text-align: center;
 }
 
-.kontakt-knapp:hover {
+.knapp:hover {
   background-color: #eae4da;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
