@@ -117,7 +117,7 @@ button:hover {
 
 /* Footer */
 footer {
-  background-color: #006aa7;
+  background: linear-gradient(to right, #006aa7, #fcd116); /* svensk blå + gul */
   color: white;
   text-align: center;
   padding: 1rem;
@@ -125,13 +125,13 @@ footer {
 
 .social-icons a {
   color: white;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 0 0.5rem;
   text-decoration: none;
 }
 
 main {
-  max-width: 900px;
+  max-width: 1024px;
   margin: 2rem auto;
   background-color: white;
   padding: 2rem;
