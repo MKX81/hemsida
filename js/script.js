@@ -13,3 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
     nav.classList.toggle("active");
   });
 });
+const bgFixed = document.querySelector('.bg-fixed');
+
+window.addEventListener('scroll', () => {
+  let scrollY = window.scrollY;
+  if (bgFixed) {
+    bgFixed.style.transform = `translateY(${scrollY * 0.3}px)`;
+  }
+});
