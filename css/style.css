@@ -96,17 +96,16 @@ body {
   background-image: url('../images/skog-dimma-1.jpg');
 }
 
-#mat {
-  background-image: url('../images/pineapple-1');
-}
-
 #hitta-hit {
   background-image: url('../images/skog-hover-1.jpg');
 }
 
 #boka {
   background-image: url('../images/calendar-1.jpg');
+}
 
+#mat {
+  background-image: url('../images/pineapple-1.jpg');
 }
 
 #om-oss {
