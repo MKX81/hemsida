@@ -18,7 +18,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.3); /* vit med 30 % opacitet */
+  background: rgba(255, 255, 255, 0.8); /* vit med 30 % opacitet */
   z-index: 0; /* se till att den hamnar bakom innehållet */
   pointer-events: none; /* så att den inte stör klick */
 }
