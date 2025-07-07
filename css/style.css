@@ -30,7 +30,7 @@ body::before {
 
 /* --- HEADER MENY --- */
 header.hidden {
-  top: -100px; /* flytta upp utanför vy så det försvinner */
+  top: -200px; /* flytta upp utanför vy så det försvinner */
   transition: top 0.3s ease;
 }
 
