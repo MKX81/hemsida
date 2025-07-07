@@ -22,23 +22,29 @@
 </head>
 
 <body>
-  <header>
-   <nav class="vertical-menu">
-  <div class="menu-title">Bosque Nórdico</div>
-  <ul class="menu-links">
-    <li><a href="#start">Start</a></li>
-    <li><a href="#hitta-hit">Hitta hit</a></li>
-    <li><a href="#boka">Boka</a></li>
-    <li><a href="#mat">Mat</a></li>
-    <li><a href="#om-oss">Om oss</a></li>
-    <li><a href="#kontakt">Kontakt</a></li>
-  </ul>
-</nav>
 
+  <!-- Infobanner som kan klickas bort -->
+  <div class="info-banner" id="infoBanner">
+    Välkommen till Bosque Nórdico! 
+    <button class="close-btn" aria-label="Stäng banner" onclick="document.getElementById('infoBanner').style.display='none'">&times;</button>
+  </div>
+
+  <header>
+    <nav class="vertical-menu" aria-label="Huvudmeny">
+      <div class="menu-title">Bosque Nórdico</div>
+      <ul class="menu-links">
+        <li><a href="#start">Start</a></li>
+        <li><a href="#hitta-hit">Hitta hit</a></li>
+        <li><a href="#boka">Boka</a></li>
+        <li><a href="#mat">Mat</a></li>
+        <li><a href="#om-oss">Om oss</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <!-- Ta bort .bg-fixed från sektionerna, de ska bara ha .section -->
+    <!-- Sektioner utan bg-fixed, bara .section -->
     <section id="start" class="section">
       <h1>Välkommen till din nordiska oas</h1>
       <p>En harmonisk plats där Sverige möter Brasilien.</p>
@@ -51,12 +57,19 @@
 
     <section id="boka" class="section">
       <h2>Boka</h2>
-      <p> Här kan du boka din vistelse.</p>
+      <p>Här kan du boka din vistelse.</p>
+      <!-- Exempel på link-box -->
+      <div class="link-box">
+        <a href="#boka">Gå till bokningssidan</a>
+      </div>
     </section>
 
     <section id="mat" class="section">
       <h2>Mat</h2>
       <p>Njut av svenska frukostar och brasilianska smaker.</p>
+      <div class="link-box">
+        <a href="#mat">Se vår meny</a>
+      </div>
     </section>
 
     <section id="om-oss" class="section">
@@ -73,6 +86,15 @@
     <section id="spacer" class="spacer"></section>
   </main>
 
+  <!-- Popup-exempel (inaktiv till att börja med, visa via JS när du vill) -->
+  <div class="popup-overlay" id="popupMessage">
+    <div class="popup-content">
+      <button class="close-btn" aria-label="Stäng popup" onclick="document.getElementById('popupMessage').classList.remove('active')">&times;</button>
+      <h2>Information</h2>
+      <p>Tack för din bokning! Vi återkommer inom kort.</p>
+    </div>
+  </div>
+
   <footer>
     <p>&copy; 2025 Bosque Nórdico</p>
     <div class="social-icons">
@@ -86,4 +108,5 @@
   </footer>
 </body>
 </html>
+
 
