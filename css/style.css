@@ -148,23 +148,30 @@ main {
   box-shadow: 0 0 10px rgba(0, 151, 57, 0.5);
 }
 
+
+
 /* Kontaktknapp */
 .kontakt-knapp {
-  background-color: #009739;
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
+  display: inline-block; /* Gör att padding, höjd och bredd fungerar korrekt */
+  background-color: #f8f5f0;
+  color: #333;
+  text-decoration: none; /* Tar bort länk-underskrift */
   font-size: 1rem;
-  cursor: pointer;
+  font-family: 'Kurale', serif;
+  border: 2px solid #7a5c38;
   border-radius: 8px;
-  transition: background-color 0.3s;
-  text-decoration: none;
-  display: inline-block;
+  padding: 1rem 2rem;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin: 2rem auto;
+  text-align: center;
 }
 
 .kontakt-knapp:hover {
-  background-color: #007f2e;
+  background-color: #eae4da;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
+
 
 /* Popup-overlay och innehåll */
 .popup-overlay {
