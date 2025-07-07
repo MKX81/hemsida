@@ -64,9 +64,8 @@ body {
 .section {
   padding: 4rem 2rem;
   max-width: 1024px;
-  margin: auto;
+  margin: 0;
   text-align: center;
-  background-color: white;
 }
 
 /* Fasta bakgrunder */
