@@ -89,6 +89,10 @@ body {
   background-image: url('../images/skog-hover-1.jpg');
 }
 
+#boka {
+  background-image: url('../images/calendar-1.jpg');
+}
+
 /* Knappar */
 button {
   background-color: #009739; /* brasilianskt grönt */
