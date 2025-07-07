@@ -101,10 +101,9 @@ main {
   z-index: 1;
 }
 
-.ruge-section h1 {
-  font-family: 'Ruge Boogie', cursive;
-  font-weight: 800;
-  font-size: 4rem;
+.amarante-section h1 {
+  font-family: "Amarante", serif;
+  font-weight: 400;
   font-style: normal;
 }
 
