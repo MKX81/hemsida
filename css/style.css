@@ -1,14 +1,19 @@
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
+  
   background-image: url('../images/rainforest-1.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; /* Behåll för fast bakgrund */
+  
   position: relative;
   color: #2d2d2d;
   z-index: 1;
+
+  /* Förbered för transform, om du vill använda JS för mjuk rörelse */
+  will-change: transform;
 }
 
 body::before {
@@ -18,154 +23,25 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.8); /* vit med 30 % opacitet */
-  z-index: 0; /* se till att den hamnar bakom innehållet */
-  pointer-events: none; /* så att den inte stör klick */
+  background: rgba(255, 255, 255, 0.8); /* vit med 80% opacitet */
+  z-index: 0; /* bakom allt innehåll */
+  pointer-events: none;
 }
 
-.spacer {
-  height: 10vh;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-   background-color: #333333;
-  padding: 1rem 2rem;
-  color: white;
-  position: relative;
-  z-index: 1000;
-  margin-bottom: 2rem;
-}
-
-.navbar .logo {
-  font-size: 2rem;
-  font-weight: 800;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  display: inline-block; /* viktigt för att transform ska fungera */
-  transition: color 0.3s, transform 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #009739; /* brasilianskt grönt */
-  transform: scale(1.1); /* förstorar länken */
-}
-
-/* HAMBURGER-MENY: gömd på stora skärmar */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-/* PARALLAX & SEKTIONER */
 .section {
   max-width: 1024px;
   margin: 0 auto 2rem auto;
   text-align: center;
   margin-bottom: 2rem;
   background-color: transparent;
-
+  position: relative; /* så sektionerna är fasta */
+  z-index: 1;
 }
 
-/* Fasta bakgrunder */
-.bg-fixed {
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  width: 100%;
-  height: 100vh; 
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* vertikal centrering */
-  align-items: center;     /* horisontell centrering */
-  z-index: -1;
+/* Ta bort .bg-fixed-klassen helt, eller kommentera ut dess CSS */
 
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 6rem 2rem;
-  text-align: center;
-
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-  will-change: transform;
-}
-
-
-#start {
-  background-image: url('../images/skog-dimma-1.jpg');
-}
-
-#hitta-hit {
-  background-image: url('../images/skog-hover-1.jpg');
-}
-
-#boka {
-  background-image: url('../images/calendar-1.jpg');
-}
-
-#mat {
-  background-image: url('../images/pineapple-1.jpg');
-}
-
-#om-oss {
-  background-image: url('../images/about-us-1.jpg');
-}
-
-#kontakt {
-  background-image: url('../images/contact-1.jpg');
-}
-
-/* Knappar */
-button {
-  background-color: #009739; /* brasilianskt grönt */
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #007f2e;
-}
-
-/* Footer */
-footer {
-  background-color: #333333;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-
-.social-icons a {
-  color: white;
-  font-size: 2rem;
-  margin: 0 0.5rem;
-  text-decoration: none;
-}
+/* Resterande CSS som du har, t.ex. navbar, knappar, footer, etc. 
+   Ingen förändring behövs här */
 
 main {
   max-width: 1024px;
@@ -173,27 +49,4 @@ main {
   border-radius: 8px;
   position: relative;
   z-index: 1;
-}
-
-
-/* MOBILANPASSNING */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #006aa7;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    padding: 1rem 0;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
 }
