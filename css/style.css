@@ -75,19 +75,19 @@ body {
   background-position: center;
   color: white;
   padding: 6rem 2rem;
-  min-height: 50 hv;
+  min-height: 50 vh;
 }
 
 #start {
-  background-image: url('images/skog-dimma-1.jpg');
+  background-image: url('../images/skog-dimma-1.jpg');
 }
 
 #mat {
-  background-image: url('images/brasiliansk-mat.jpg');
+  background-image: url('../images/jungle-background.jpg');
 }
 
 #hitta-hit {
-  background-image: url('images/karta.jpg');
+  background-image: url('../images/skog1.jpg');
 }
 
 /* Knappar */
@@ -124,7 +124,6 @@ footer {
 main {
   max-width: 1024px;
   margin: 2rem auto;
-  background-color: #F0EAD6;
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
