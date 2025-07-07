@@ -7,9 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Funktion för att visa menyn och starta timer för att gömma den
   function showMenu() {
     header.classList.remove('hidden');
+    document.body.classList.remove('menu-hidden');
     clearTimeout(hideTimeout);
     hideTimeout = setTimeout(() => {
       header.classList.add('hidden');
+      document.body.classList.add('menu-hidden');
     }, 3000); // göm efter 3 sek utan rörelse
   }
 
