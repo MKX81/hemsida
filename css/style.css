@@ -51,21 +51,6 @@ header {
   backdrop-filter: blur(5px);
 }
 
-/* Menytitel */
-.menu-title {
-  font-size: 2rem;
-  text-align: left;
-  font-weight: 700;
-  color: #333333; 
-  margin-bottom: 0.3rem;
-
-  align-self: flex-start;
-  padding-left: 1rem; /* justera efter behov */
-}
-header.hidden .menu-title {
-  color: white;
-}
-
 /* Menylänkar i horisontell rad */
 .menu-links {
   list-style: none;
