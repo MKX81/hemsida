@@ -120,6 +120,13 @@ main {
   border-radius: 10px;
   z-index: 1;
 }
+.image-section {
+  width: 100%;
+  max-height: 10rem;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
 
 /* Spacer för extra avstånd */
 .spacer {
