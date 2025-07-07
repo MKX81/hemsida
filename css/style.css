@@ -7,7 +7,6 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-attachment: fixed; /* fast bakgrund */
 
   position: relative;
   color: #2d2d2d;
