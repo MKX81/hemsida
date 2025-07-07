@@ -49,3 +49,14 @@ function visaBokningsmeddelande() {
     meddelande.style.marginTop = "1rem";
   }
 }
+const header = document.querySelector('header');
+let hideTimeout;
+
+// Visa menyn och starta timer för att gömma
+function showMenu() {
+  header.classList.remove('hidden');
+  clearTimeout(hideTimeout);
+  hideTimeout = setTimeout(() => {
+    header.classList.add('hidden');
+  }, 3000); // göm efter 3 sek utan rörelse vid toppen
+}
