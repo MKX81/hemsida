@@ -6,13 +6,12 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-attachment: fixed; /* Behåll för fast bakgrund */
+  background-attachment: fixed;
   
   position: relative;
   color: #2d2d2d;
   z-index: 1;
 
-  /* Förbered för transform, om du vill använda JS för mjuk rörelse */
   will-change: transform;
 }
 
@@ -23,16 +22,17 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.8); /* vit med 80% opacitet */
-  z-index: 0; /* bakom allt innehåll */
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 0;
   pointer-events: none;
 }
 
+/* Vertikal meny */
 .vertical-menu {
-  position: fixed;   /* fixerad vid sidan eller toppen, kan justeras */
+  position: fixed;
   top: 20px;
   left: 20px;
-  background: transparent; /* helt genomskinlig bakgrund */
+  background: transparent;
   padding: 0;
   margin: 0;
   font-family: "Segoe UI", sans-serif;
@@ -42,7 +42,7 @@ body::before {
 .menu-title {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #009739; /* exempel på grön färg */
+  color: #009739;
   margin-bottom: 1rem;
   user-select: none;
 }
@@ -54,28 +54,61 @@ body::before {
 }
 
 .menu-links li {
-  margin-bottom: 0.6rem;
+  margin-bottom: 1rem;
 }
 
 .menu-links a {
-  color: #2d2d2d; /* textfärg, ändra vid behov */
+  color: #2d2d2d;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, font-size 0.3s ease;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: inline-block;
 }
 
 .menu-links a:hover {
   color: #009739;
+  font-size: 1.3rem; /* större text vid hover */
 }
 
+/* Boxar med länkar */
+.link-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  margin: 1rem auto;
+  max-width: 320px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
 
+.link-box:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+}
+
+.link-box a {
+  color: #009739;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: block;
+}
+
+.link-box a:hover {
+  text-decoration: underline;
+}
+
+/* Sektioner */
 .section {
   max-width: 1024px;
   margin: 0 auto 2rem auto;
   text-align: center;
-  margin-bottom: 2rem;
   background-color: transparent;
-  position: relative; /* så sektionerna är fasta */
+  position: relative;
   z-index: 1;
 }
 
@@ -86,3 +119,4 @@ main {
   position: relative;
   z-index: 1;
 }
+
