@@ -93,6 +93,14 @@ body {
   background-image: url('../images/calendar-1.jpg');
 }
 
+#om oss {
+  background-image: url('../images/about-us-1.jpg');
+}
+
+#kontakt {
+  background-image: url('../images/contact-1.jpg');
+}
+
 /* Knappar */
 button {
   background-color: #009739; /* brasilianskt grönt */
@@ -126,10 +134,8 @@ footer {
 
 main {
   max-width: 1024px;
-  margin: 2rem auto;
-  padding: 2rem;
+  margin: 0 auto;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   position: relative;
   z-index: 1;
 }
