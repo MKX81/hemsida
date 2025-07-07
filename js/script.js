@@ -65,4 +65,9 @@ function visaBokningsmeddelande() {
     meddelande.style.marginTop = "1rem";
   }
 }
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  // Flytta bakgrundsposition vertikalt, t.ex. hälften av scrollvärdet
+  document.body.style.backgroundPosition = `center ${scrollY * 0.5}px`;
+});
 
