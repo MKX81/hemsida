@@ -97,10 +97,18 @@ main {
 
 .ruge-section h1 {
   font-family: 'Ruge Boogie', cursive;
-  font-weight: 700;
-  font-size: 3rem;
+  font-weight: 800;
+  font-size: 4rem;
   font-style: normal;
 }
+
+.kurale-section p {
+  font-family: "Kurale", serif;
+  font-weight: 400;
+  font-size: 2rem
+  font-style: normal;
+}
+
 
 /* Sektioner */
 .section {
