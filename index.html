@@ -1,56 +1,64 @@
 <!DOCTYPE html>
 <html lang="sv">
- <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fabriksparken 1</title>
-  <link rel="stylesheet" href="css/styles.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Välkommen till vårt B&B</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">B&B Sol & Skog</div>
+      <button class="menu-toggle" aria-label="Visa meny">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="#start">Start</a></li>
+        <li><a href="#hitta-hit">Hitta hit</a></li>
+        <li><a href="#boka">Boka</a></li>
+        <li><a href="#mat">Mat</a></li>
+        <li><a href="#om-oss">Om oss</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <body>
+  <main>
+    <section id="start" class="section bg-fixed" style="background-image: url('images/skog.jpg');">
+      <h1>Välkommen till vårt Bed & Breakfast</h1>
+      <p>En harmonisk plats där Sverige möter Brasilien.</p>
+    </section>
 
-   <nav class="navbar">
-  <div class="logo navbar-logo">Fabriksparken</div>
-  <button class="menu-toggle" id="menu-toggle">&#9776;</button>
-  <ul class="menu" id="menu">
-    <li><a href="#">Start</a></li>
-    <li><a href="#">Nyheter</a></li>
-    <li><a href="#">För boende</a></li>
-    <li><a href="#">Vår förening</a></li>
-    <li><a href="#">För mäklare</a></li>
-  </ul>
-</nav>
+    <section id="hitta-hit" class="section bg-fixed" style="background-image: url('images/karta.jpg');">
+      <h2>Hitta hit</h2>
+      <p>Vi finns mitt i naturen, men lättillgängliga med bil och buss.</p>
+    </section>
 
+    <section id="boka" class="section">
+      <h2>Boka</h2>
+      <button onclick="visaBokningsmeddelande()">Boka ditt rum</button>
+      <p id="bokningsmeddelande"></p>
+    </section>
 
-  <div class="container message">
-    <p>Vi gör om våra sidor; om länkar är trasiga eller information saknas är vi tacksamma för återkoppling via mejl: 
-      <a href="mailto:info@fabriksparken1.se">info@fabriksparken1.se</a></p>
-     <p>Vänliga hälsningar från styrelsen</p>
-  </div>
+    <section id="mat" class="section bg-fixed" style="background-image: url('images/brasiliansk-mat.jpg');">
+      <h2>Mat</h2>
+      <p>Njut av svenska frukostar och brasilianska smaker.</p>
+    </section>
 
-  <div class="container logo">
-   <img src="images/logo-innergard-gron-1-1.png" alt="Logotyp på innergården" />
-  </div>
+    <section id="om-oss" class="section">
+      <h2>Om oss</h2>
+      <p>Vi är ett svensk-brasilianskt par som driver detta B&B med kärlek.</p>
+    </section>
 
-  <div class="container section">
-    <a href="#">Nyheter</a>
-    <p>Läs föreningens nyhetsbrev och titta i kalendariet.</p>
-  </div>
+    <section id="kontakt" class="section">
+      <h2>Kontakt</h2>
+      <p>Har du frågor? Kontakta oss gärna via formuläret nedan.</p>
+      <a href="kontakt.html" class="kontakt-knapp">Gå till kontaktformulär</a>
+    </section>
+  </main>
 
-  <div class="container section">
-    <a href="#">För boende</a>
-    <p>Här hittar du information om din bostad, passagesystem, parkering, gemensamma utrymmen, felanmälan m.m.</p>
-  </div>
-
-  <div class="container section">
-    <a href="#">Vår förening</a>
-    <p>Läs om vår förening, stadgar, styrelse, ekonomisk förvaltning, viktiga dokument och information till nya medlemmar.</p>
-  </div>
-
-  <div class="container section">
-    <a href="#">För mäklare</a>
-    <p>Här hittar du all information för mäklare.</p>
-  </div>
-
+  <footer>
+    <p>&copy; 2025 B&B Sol & Skog</p>
+  </footer>
 </body>
 </html>
