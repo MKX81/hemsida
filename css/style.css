@@ -1,219 +1,243 @@
-/* Body och bakgrund */
+/* Grundinställningar för body och bakgrund */
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  
+
   background-image: url('../images/rainforest-1.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-attachment: fixed;
-  
+  background-attachment: fixed; /* fast bakgrund */
+
   position: relative;
   color: #2d2d2d;
   z-index: 1;
 
-  will-change: transform;
+  will-change: transform; /* för framtida JS-animationer */
 }
 
+/* Vit overlay över bakgrunden */
 body::before {
   content: "";
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   background: rgba(255, 255, 255, 0.8);
   z-index: 0;
   pointer-events: none;
 }
 
-/* Vertikal meny */
-.vertical-menu {
+/* --- HEADER MENY --- */
+header {
   position: fixed;
-  top: 20px;
-  left: 20px;
-  background: transparent;
-  padding: 0;
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  z-index: 1000;
-}
-
-.menu-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #009739;
-  margin-bottom: 1rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent; /* genomskinlig */
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 0;
   user-select: none;
+  box-sizing: border-box;
 }
 
+/* Menytitel */
+.menu-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #009739; /* brasilianskt grönt */
+  margin-bottom: 0.3rem;
+}
+
+/* Menylänkar i horisontell rad */
 .menu-links {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 1024px;
 }
 
 .menu-links li {
-  margin-bottom: 1rem;
+  margin: 0;
 }
 
 .menu-links a {
   color: #2d2d2d;
   text-decoration: none;
   font-weight: 600;
+  font-size: 1.1rem;
   transition: color 0.3s ease, font-size 0.3s ease;
   cursor: pointer;
-  font-size: 1.1rem;
+  padding: 0.25rem 0;
   display: inline-block;
 }
 
 .menu-links a:hover {
   color: #009739;
-  font-size: 1.3rem; /* större text vid hover */
+  font-size: 1.3rem;
 }
 
-/* Boxar med länkar */
-.link-box {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  padding: 1.5rem 2rem;
-  margin: 1rem auto;
-  max-width: 320px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
-  text-align: center;
-}
-
-.link-box:hover {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  transform: translateY(-5px);
-}
-
-.link-box a {
-  color: #009739;
-  font-weight: 700;
-  font-size: 1.2rem;
-  text-decoration: none;
-  display: block;
-}
-
-.link-box a:hover {
-  text-decoration: underline;
+/* Undvik att innehåll hamnar under headern */
+main {
+  padding-top: 5rem; /* justera efter headerns höjd */
+  max-width: 1024px;
+  margin: 0 auto;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
 }
 
 /* Sektioner */
 .section {
-  max-width: 1024px;
-  margin: 0 auto 2rem auto;
+  margin-bottom: 2rem;
   text-align: center;
   background-color: transparent;
   position: relative;
   z-index: 1;
 }
 
-/* Textsektioner */
-.text-section {
-  max-width: 768px;
-  margin: 2rem auto;
-  padding: 1rem 1.5rem;
-  background-color: rgba(255,255,255,0.9);
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  color: #333;
-  font-size: 1.1rem;
-  line-height: 1.5;
+/* Spacer för extra avstånd */
+.spacer {
+  height: 10vh;
 }
 
-/* Banner/infotext högst upp */
-.info-banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+/* Boxar för länkar, t ex bokning eller menyer */
+.link-box {
+  border: 2px solid #009739;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 320px;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link-box a {
+  color: #009739;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+}
+
+.link-box:hover {
+  background-color: rgba(0, 151, 57, 0.1);
+  box-shadow: 0 0 10px rgba(0, 151, 57, 0.5);
+}
+
+/* Kontaktknapp */
+.kontakt-knapp {
   background-color: #009739;
   color: white;
-  padding: 0.75rem 1rem;
-  font-weight: 600;
-  text-align: center;
-  z-index: 1100;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.info-banner .close-btn {
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
   border: none;
-  color: white;
-  font-size: 1.25rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
-  font-weight: 700;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  display: inline-block;
 }
 
-/* Popup-meddelanden / modaler */
+.kontakt-knapp:hover {
+  background-color: #007f2e;
+}
+
+/* Popup-overlay och innehåll */
 .popup-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
-  display: flex;
+  background: rgba(0,0,0,0.4);
+  display: none; /* visas via JS */
   justify-content: center;
   align-items: center;
   z-index: 1200;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
 .popup-overlay.active {
-  visibility: visible;
-  opacity: 1;
+  display: flex;
 }
 
 .popup-content {
-  background-color: white;
+  background: white;
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 10px;
   max-width: 400px;
-  width: 90%;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
   position: relative;
   text-align: center;
 }
 
+/* Popup stäng-knapp */
 .popup-content .close-btn {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
+  top: 10px;
+  right: 10px;
+  background: transparent;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
-/* Knapp för att stänga element generellt */
-.close-btn {
-  background: none;
-  border: none;
-  font-size: 1.25rem;
-  cursor: pointer;
-  color: inherit;
+/* Info-banner högst upp, klickbar för att stänga */
+.info-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #009739;
+  color: white;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  z-index: 1150;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  user-select: none;
 }
 
-main {
-  max-width: 1024px;
-  margin: 0 auto;
-  border-radius: 8px;
-  position: relative;
-  z-index: 1;
+.info-banner .close-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: #333333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 2rem;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+/* Responsiv justering av menylänkar (om du vill) */
+@media (max-width: 768px) {
+  .menu-links {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
 }
 
