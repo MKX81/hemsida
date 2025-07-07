@@ -88,22 +88,26 @@ body::before {
 
 /* Fasta bakgrunder */
 .bg-fixed {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  height: 100vh; 
   display: flex;
   flex-direction: column;
   justify-content: center; /* vertikal centrering */
   align-items: center;     /* horisontell centrering */
 
-  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   color: white;
   padding: 6rem 2rem;
-  min-height: 25vh;
   text-align: center;
 
   font-size: 1.5rem;
   font-weight: 700;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  will-change: transform;
 }
 
 
