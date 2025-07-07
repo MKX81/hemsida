@@ -53,8 +53,8 @@ header {
 
 /* Menytitel */
 .menu-title {
-  font-size: 4rem;
-  text-align: center;
+  font-size: 2rem;
+  text-align: left;
   font-weight: 700;
   color: #333333; 
   margin-bottom: 0.3rem;
