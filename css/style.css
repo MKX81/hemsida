@@ -77,6 +77,21 @@ main {
   position: relative;
   z-index: 1;
 }
+.title {
+  position: fixed;
+  top: 0.5rem;
+  left: 1.5rem;
+  font-size: 3rem;
+  color: #333333;
+  font-weight: 700;
+  z-index: 1200;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.menu-hidden .title {
+  color: white;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
 
 .amarante-section h1 {
   font-family: "Amarante", serif;
