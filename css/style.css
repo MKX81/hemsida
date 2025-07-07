@@ -1,5 +1,58 @@
-/* Befintliga regler här... */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f5faff; /* ljus blå ton */
+  color: #2d2d2d;
+}
 
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #006aa7, #fcd116); /* svensk blå + gul */
+  padding: 1rem 2rem;
+  color: white;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #009739; /* brasilianskt grönt */
+}
+
+/* HAMBURGER-MENY: gömd på stora skärmar */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* PARALLAX & SEKTIONER */
 .section {
   padding: 4rem 2rem;
   max-width: 900px;
@@ -8,7 +61,7 @@
   background-color: white;
 }
 
-/* Bakgrundssektion med fast bild */
+/* Fasta bakgrunder */
 .bg-fixed {
   background-attachment: fixed;
   background-size: cover;
@@ -17,10 +70,8 @@
   padding: 6rem 2rem;
 }
 
-/* Specifika sektioner med olika bilder */
 #start {
-  background-image: url('images/skog.jpg'); /* byt till dina egna bilder */
-  background-color: rgba(0,0,0,0.5);
+  background-image: url('images/skog.jpg');
 }
 
 #mat {
@@ -31,3 +82,55 @@
   background-image: url('images/karta.jpg');
 }
 
+/* Knappar */
+button {
+  background-color: #009739; /* brasilianskt grönt */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #007f2e;
+}
+
+/* Footer */
+footer {
+  background-color: #006aa7;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+/* MOBILANPASSNING */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #006aa7;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
