@@ -58,6 +58,12 @@ header {
   font-weight: 700;
   color: #333333; 
   margin-bottom: 0.3rem;
+
+  align-self: flex-start;
+  padding-left: 1rem; /* justera efter behov */
+}
+header.hidden .menu-title {
+  color: white;
 }
 
 /* Menylänkar i horisontell rad */
