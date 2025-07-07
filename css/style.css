@@ -7,18 +7,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.6); /* vit transparent ton */
   color: #2d2d2d;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
-  background-color: rgba(255, 255, 255, 0.6);
-  pointer-events: none;
-  z-index: -1;
 }
 
 
@@ -27,7 +16,7 @@ body::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, #006aa7, #fcd116); /* svensk blå + gul */
+   background-color: #333333;
   padding: 1rem 2rem;
   color: white;
   position: relative;
@@ -117,7 +106,7 @@ button:hover {
 
 /* Footer */
 footer {
-  background: linear-gradient(to right, #006aa7, #fcd116); /* svensk blå + gul */
+  background-color: #333333;
   color: white;
   text-align: center;
   padding: 1rem;
