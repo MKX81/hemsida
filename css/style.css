@@ -28,6 +28,47 @@ body::before {
   pointer-events: none;
 }
 
+.vertical-menu {
+  position: fixed;   /* fixerad vid sidan eller toppen, kan justeras */
+  top: 20px;
+  left: 20px;
+  background: transparent; /* helt genomskinlig bakgrund */
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  z-index: 1000;
+}
+
+.menu-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #009739; /* exempel på grön färg */
+  margin-bottom: 1rem;
+  user-select: none;
+}
+
+.menu-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-links li {
+  margin-bottom: 0.6rem;
+}
+
+.menu-links a {
+  color: #2d2d2d; /* textfärg, ändra vid behov */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.menu-links a:hover {
+  color: #009739;
+}
+
+
 .section {
   max-width: 1024px;
   margin: 0 auto 2rem auto;
@@ -37,11 +78,6 @@ body::before {
   position: relative; /* så sektionerna är fasta */
   z-index: 1;
 }
-
-/* Ta bort .bg-fixed-klassen helt, eller kommentera ut dess CSS */
-
-/* Resterande CSS som du har, t.ex. navbar, knappar, footer, etc. 
-   Ingen förändring behövs här */
 
 main {
   max-width: 1024px;
