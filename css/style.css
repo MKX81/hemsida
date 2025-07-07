@@ -118,7 +118,7 @@ main {
   text-align: center;
   background: rgba(255, 255, 255, 0.9);
   position: relative;
-  corner-radius: 10px;
+  border-radius: 10px;
   z-index: 1;
 }
 
