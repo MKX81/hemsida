@@ -1,0 +1,33 @@
+/* Befintliga regler här... */
+
+.section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  background-color: white;
+}
+
+/* Bakgrundssektion med fast bild */
+.bg-fixed {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 6rem 2rem;
+}
+
+/* Specifika sektioner med olika bilder */
+#start {
+  background-image: url('images/skog.jpg'); /* byt till dina egna bilder */
+  background-color: rgba(0,0,0,0.5);
+}
+
+#mat {
+  background-image: url('images/brasiliansk-mat.jpg');
+}
+
+#hitta-hit {
+  background-image: url('images/karta.jpg');
+}
+
