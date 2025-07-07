@@ -29,7 +29,13 @@ body::before {
 }
 
 /* --- HEADER MENY --- */
+header.hidden {
+  top: -100px; /* flytta upp utanför vy så det försvinner */
+  transition: top 0.3s ease;
+}
+
 header {
+  transition: top 0.3s ease;
   position: fixed;
   top: 0;
   left: 0;
