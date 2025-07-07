@@ -43,6 +43,7 @@ header {
   padding: 0.5rem 0;
   user-select: none;
   box-sizing: border-box;
+  backdrop-filter: blur(5px);
 }
 
 /* Menytitel */
@@ -246,10 +247,11 @@ footer {
   color: #333333;
   text-align: center;
   padding: 1rem;
+  backdrop-filter: blur(5px);
 }
 
 .social-icons a {
-  color: white;
+  color: #333333;
   font-size: 2rem;
   margin: 0 0.5rem;
   text-decoration: none;
