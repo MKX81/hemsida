@@ -48,8 +48,9 @@ header {
 /* Menytitel */
 .menu-title {
   font-size: 2rem;
+  text-align: center;
   font-weight: 700;
-  color: #009739; /* brasilianskt grönt */
+  color: #F0EAD6; 
   margin-bottom: 0.3rem;
 }
 
@@ -59,7 +60,7 @@ header {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
   justify-content: center;
   width: 100%;
   max-width: 1024px;
@@ -70,10 +71,10 @@ header {
 }
 
 .menu-links a {
-  color: #2d2d2d;
+  color: #F0EAD6;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   transition: color 0.3s ease, font-size 0.3s ease;
   cursor: pointer;
   padding: 0.25rem 0;
@@ -81,7 +82,6 @@ header {
 }
 
 .menu-links a:hover {
-  color: #009739;
   font-size: 1.3rem;
 }
 
