@@ -62,7 +62,6 @@ body {
 
 /* PARALLAX & SEKTIONER */
 .section {
-  padding: 4rem 2rem;
   max-width: 1024px;
   margin: 0;
   text-align: center;
@@ -75,7 +74,7 @@ body {
   background-position: center;
   color: white;
   padding: 6rem 2rem;
-  min-height: 50 vh;
+  min-height: 75 vh;
 }
 
 #start {
