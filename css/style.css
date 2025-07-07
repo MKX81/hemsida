@@ -23,9 +23,10 @@ body::before {
   pointer-events: none; /* så att den inte stör klick */
 }
 
+.spacer {
+  height: 10vh;
+}
 
-
-/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
