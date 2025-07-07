@@ -74,7 +74,7 @@ body {
   background-position: center;
   color: white;
   padding: 6rem 2rem;
-  min-height: 75 vh;
+  min-height: 75vh;
 }
 
 #start {
@@ -93,7 +93,7 @@ body {
   background-image: url('../images/calendar-1.jpg');
 }
 
-#om oss {
+#om-oss {
   background-image: url('../images/about-us-1.jpg');
 }
 
