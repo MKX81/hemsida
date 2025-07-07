@@ -232,6 +232,12 @@ footer {
   text-decoration: none;
 }
 
+.spacer {
+  height: 5vh;        /* justera höjden efter behov */
+  background-color: transparent; /* helt genomskinlig */
+  width: 100%;         /* tar full bredd */
+}
+
 /* Responsiv justering av menylänkar (om du vill) */
 @media (max-width: 768px) {
   .menu-links {
