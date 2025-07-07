@@ -112,7 +112,8 @@ main {
 
 /* Sektioner */
 .section {
-  margin-bottom: 10rem;
+  margin-bottom: 3rem;
+  padding: 0.4rem;
   text-align: center;
   background: rgba(255, 255, 255, 0.9);
   position: relative;
@@ -150,12 +151,11 @@ main {
 
 
 
-/* Kontaktknapp */
-.kontakt-knapp {
-  display: inline-block; /* Gör att padding, höjd och bredd fungerar korrekt */
+.knapp {
+  display: inline-block;
   background-color: #f8f5f0;
   color: #333;
-  text-decoration: none; /* Tar bort länk-underskrift */
+  text-decoration: none; 
   font-size: 1rem;
   font-family: 'Kurale', serif;
   border: 2px solid #7a5c38;
