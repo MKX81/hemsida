@@ -72,13 +72,20 @@ body {
 
 /* Fasta bakgrunder */
 .bg-fixed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertikal centrering */
+  align-items: center;     /* horisontell centrering */
+
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   color: white;
   padding: 6rem 2rem;
   min-height: 50vh;
+  text-align: center;
 }
+
 
 #start {
   background-image: url('../images/skog-dimma-1.jpg');
