@@ -5,20 +5,29 @@
   box-sizing: border-box;
 }
 
-body, html {
-  font-family: 'Kurale', serif;
+html,
+body {
   height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Kurale", serif;
   scroll-behavior: smooth;
   color: #2d2d2d;
+
+  /* Bakgrundsbild på body */
+  background-image: url("../images/rainforest-2.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
-/* ---------------- Header / Navbar ---------------- */
+/* Header / Navbar */
 header {
   position: fixed;
   width: 100%;
   top: 0;
   background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 
@@ -30,7 +39,7 @@ header {
 }
 
 .logo {
-  font-family: 'Amarante', cursive;
+  font-family: "Amarante", cursive;
   font-size: 1.8rem;
   color: #4d6b57;
 }
@@ -40,6 +49,11 @@ header {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+  transition: none;
 }
 
 .nav-links a {
@@ -53,20 +67,25 @@ header {
   color: #4d6b57;
 }
 
-/* ---------------- Hero Section ---------------- */
+/* Hamburger-meny */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #4d6b57;
+  cursor: pointer;
+}
+
+/* Hero Section */
 .hero-image {
-  background-image: url('../images/rainforest-2.jpg');
-  min-height: 100vh; 
-  height: 100vh;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   text-align: center;
   padding: 0 1rem;
+  background: transparent;
+  margin-top: 70px; /* plats för header */
 }
 
 .hero-text {
@@ -78,7 +97,7 @@ header {
 
 .hero-text h1 {
   font-size: 3rem;
-  font-family: 'Amarante', cursive;
+  font-family: "Amarante", cursive;
   color: #4d6b57;
   margin-bottom: 1rem;
 }
@@ -103,12 +122,12 @@ header {
   background-color: #355143;
 }
 
-/* ---------------- Footer ---------------- */
+/* Footer */
 footer {
   background-color: #f4f4f4;
   padding: 1rem;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 0;
 }
 
 .social-icons {
@@ -126,14 +145,6 @@ footer {
   color: #2a3d31;
 }
 
-/* ---------------- Hamburger-meny ---------------- */
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  color: #4d6b57;
-  cursor: pointer;
-}
-
 /* Responsiv design – mobil och surfplatta */
 @media (max-width: 768px) {
   .menu-toggle {
@@ -147,30 +158,25 @@ footer {
     width: 100%;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.95);
+
     display: none;
     padding: 1rem 0;
     text-align: center;
+
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
   }
 
   .nav-links li {
     margin: 1rem 0;
   }
-
-  .nav-links.active {
-    display: flex;
-  }
 }
-
-.nav-links {
-  transition: all 0.3s ease;
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
-}
-
-.nav-links.active {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: all;
-}
-
