@@ -1,18 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Header transparent/opaque
   const header = document.querySelector('header');
   let hideTimeout;
 
-  // Gör header "opaque" (normal bakgrund och textfärg)
   function makeOpaque() {
     header.classList.remove('transparent');
   }
 
-  // Gör header transparent (ingen bakgrund, vit text)
   function makeTransparent() {
     header.classList.add('transparent');
   }
 
-  // Starta/timern som byter till transparent efter 3 sek utan musrörelse
   function resetTimer() {
     makeOpaque();
     clearTimeout(hideTimeout);
@@ -21,32 +19,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3000);
   }
 
-  // Visa header som opaque initialt
   makeOpaque();
 
-  // Lyssna på musrörelse
-window.addEventListener('mousemove', (e) => {
-  const headerRect = header.getBoundingClientRect();
-  
-  // Kolla om musen är inom header-området
-  if (
-    e.clientY >= headerRect.top &&
-    e.clientY <= headerRect.bottom &&
-    e.clientX >= headerRect.left &&
-    e.clientX <= headerRect.right
-  ) {
-    makeOpaque();
-    clearTimeout(hideTimeout);
-  } else {
-    resetTimer();
-  }
-});
+  window.addEventListener('mousemove', (e) => {
+    const headerRect = header.getBoundingClientRect();
 
+    if (
+      e.clientY >= headerRect.top &&
+      e.clientY <= headerRect.bottom &&
+      e.clientX >= headerRect.left &&
+      e.clientX <= headerRect.right
+    ) {
+      makeOpaque();
+      clearTimeout(hideTimeout);
+    } else {
+      resetTimer();
+    }
+  });
 
-  // Starta timer direkt
   resetTimer();
 
-  // --- INFO-BANNER: klicka för att stänga ---
+  // Info-banner stäng knapp
   const infoBanner = document.querySelector(".info-banner");
   if (infoBanner) {
     const closeBtn = infoBanner.querySelector(".close-btn");
@@ -55,7 +48,7 @@ window.addEventListener('mousemove', (e) => {
     });
   }
 
-  // --- POPUP: öppna och stäng ---
+  // Popup hantering
   const popupOverlay = document.querySelector(".popup-overlay");
   const popupCloseBtn = popupOverlay ? popupOverlay.querySelector(".close-btn") : null;
 
@@ -70,9 +63,90 @@ window.addEventListener('mousemove', (e) => {
       }
     });
   }
+
+  // Kontaktformulär
+  const form = document.getElementById("kontaktformulär");
+  const feedback = document.getElementById("feedback");
+
+  if (form && feedback) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const namn = document.getElementById("namn").value.trim();
+      const epost = document.getElementById("epost").value.trim();
+      const meddelande = document.getElementById("meddelande").value.trim();
+
+      if (!namn || !epost || !meddelande) {
+        feedback.textContent = "Fyll i alla fält.";
+        feedback.style.color = "red";
+        return;
+      }
+
+      feedback.textContent = "Tack för ditt meddelande!";
+      feedback.style.color = "green";
+      form.reset();
+    });
+  }
+
+  // Parallax scroll för bakgrund
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    document.body.style.backgroundPosition = `center ${scrollY * 0.5}px`;
+  });
+
+  // Dropdown-meny
+  const dropdown = document.querySelector('.dropdown > a');
+  const menu = dropdown?.nextElementSibling;
+
+  if (dropdown && menu) {
+    dropdown.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelectorAll('.dropdown-menu').forEach(m => {
+        if (m !== menu) m.style.display = 'none';
+      });
+
+      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.dropdown')) {
+        menu.style.display = 'none';
+      }
+    });
+  }
+
+  // --- Slideshow ---
+
+  let slideIndex = 1;
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1;}
+    if (n < 1) {slideIndex = slides.length;}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+
+  window.plusSlides = function(n) {
+    showSlides(slideIndex += n);
+  }
+
+  window.currentSlide = function(n) {
+    showSlides(slideIndex = n);
+  }
+
+  showSlides(slideIndex);
 });
 
-// --- FUNKTION för att visa popup (anropa denna var du vill) ---
+// Funktion att visa popup externt
 function showPopup() {
   const popupOverlay = document.querySelector(".popup-overlay");
   if (popupOverlay) {
@@ -80,7 +154,7 @@ function showPopup() {
   }
 }
 
-// --- BOKNINGSMEDDELANDE ---
+// Funktion för bokningsmeddelande externt
 function visaBokningsmeddelande() {
   const meddelande = document.getElementById("bokningsmeddelande");
   if (meddelande) {
@@ -88,88 +162,4 @@ function visaBokningsmeddelande() {
     meddelande.style.color = "#009739";
     meddelande.style.marginTop = "1rem";
   }
-}
-
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-  document.body.style.backgroundPosition = `center ${scrollY * 0.5}px`;
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const dropdown = document.querySelector('.dropdown > a');
-  const menu = dropdown?.nextElementSibling;
-
-  if (dropdown && menu) {
-    dropdown.addEventListener('click', function (e) {
-      e.preventDefault();
-      // Stäng alla andra öppna dropdowns (valfritt)
-      document.querySelectorAll('.dropdown-menu').forEach(m => {
-        if (m !== menu) m.style.display = 'none';
-      });
-
-      // Toggle meny
-      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-    });
-
-    // Klick utanför dropdown stänger menyn (valfritt)
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.dropdown')) {
-        menu.style.display = 'none';
-      }
-    });
-  }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("kontaktformulär");
-  const feedback = document.getElementById("feedback");
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    // Hämta fältvärden
-    const namn = document.getElementById("namn").value.trim();
-    const epost = document.getElementById("epost").value.trim();
-    const meddelande = document.getElementById("meddelande").value.trim();
-
-    if (!namn || !epost || !meddelande) {
-      feedback.textContent = "Fyll i alla fält.";
-      feedback.style.color = "red";
-      return;
-    }
-
-    // Simulera skickat meddelande
-    feedback.textContent = "Tack för ditt meddelande!";
-    feedback.style.color = "green";
-    form.reset();
-  });
-});
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
 }
