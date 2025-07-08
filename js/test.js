@@ -1,4 +1,3 @@
-<script>
 let slideIndex = 0;
 showSlides();
 
@@ -15,4 +14,3 @@ function showSlides() {
   slides[slideIndex - 1].style.display = "block";
   setTimeout(showSlides, 5000); // byt bild var 5:e sekund
 }
-</script>
