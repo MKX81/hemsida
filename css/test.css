@@ -1,7 +1,7 @@
 .slideshow-container {
   position: relative;
   width: 100%;
-  height: 25vh; /* justera höjd efter smak */
+  height: auto; /* justera höjd efter smak */
   overflow: hidden;
 }
 
