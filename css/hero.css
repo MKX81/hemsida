@@ -56,6 +56,7 @@ header {
 /* ---------------- Hero Section ---------------- */
 .hero-image {
   background-image: url('../images/rainforest-2.jpg');
+  min-height: 100vh; 
   height: 100vh;
   background-size: cover;
   background-position: center center;
