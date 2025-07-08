@@ -18,37 +18,55 @@ body {
 
 /* --- HEADER MENY --- */
 header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.2rem 1rem;
+
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1100;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0.2rem 1rem;
-
   background: rgba(255, 255, 255, 0.4);
   border-bottom: 2px solid rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(5px);
 }
 
-/* Menylänkar i horisontell rad, centrerade */
-.menu-links {
-  font-family: 'Kurale', serif; 
-  list-style: none;
-  padding: 0.2rem 1rem;
-  margin: 0;
-  margin-top: 0.2rem;
-
+.main-nav {
   display: flex;
-  gap: 2rem;
-  justify-content: center;
+  align-items: center;
+  position: relative;
   width: 100%;
 }
 
-/* Menylänk */
+/* Logon till vänster, fix höjd */
+.logo-link {
+  height: 2rem;
+  flex-shrink: 0; /* så att den inte krymper */
+}
+
+.logo-link img {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+/* Menyn centreras med absolut position och transform */
+.menu-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Kurale', serif;
+}
+
 .menu-links a {
   color: #333333;
   text-decoration: none;
