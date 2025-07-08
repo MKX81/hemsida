@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Header transparent/opaque
+  // --- Header transparent/opaque ---
   const header = document.querySelector('header');
   let hideTimeout;
 
@@ -21,26 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   makeOpaque();
 
-  document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.getElementById("menu-toggle");
-  const nav = document.getElementById("nav-links");
-  const navLinks = document.querySelectorAll("#nav-links a");
-
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
-  });
-
-  navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("active");
-    });
-  });
-});
-
-
   window.addEventListener('mousemove', (e) => {
     const headerRect = header.getBoundingClientRect();
-
     if (
       e.clientY >= headerRect.top &&
       e.clientY <= headerRect.bottom &&
@@ -56,23 +38,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
   resetTimer();
 
-  // Info-banner stäng knapp
-  const infoBanner = document.querySelector(".info-banner");
-  if (infoBanner) {
-    const closeBtn = infoBanner.querySelector(".close-btn");
-    closeBtn.addEventListener("click", () => {
-      infoBanner.style.display = "none";
+  // --- Hamburger-meny ---
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav-links");
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+
+    const navLinks = nav.querySelectorAll("a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("active");
+      });
     });
   }
 
-  // Popup hantering
-  const popupOverlay = document.querySelector(".popup-overlay");
-  const popupCloseBtn = popupOverlay ? popupOverlay.querySelector(".close-btn") : null;
+  // --- Info-banner stängning ---
+  const infoBanner = document.querySelector(".info-banner");
+  if (infoBanner) {
+    const closeBtn = infoBanner.querySelector(".close-btn");
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => {
+        infoBanner.style.display = "none";
+      });
+    }
+  }
 
-  if (popupCloseBtn && popupOverlay) {
-    popupCloseBtn.addEventListener("click", () => {
-      popupOverlay.classList.remove("active");
-    });
+  // --- Popup hantering ---
+  const popupOverlay = document.querySelector(".popup-overlay");
+  if (popupOverlay) {
+    const popupCloseBtn = popupOverlay.querySelector(".close-btn");
+    if (popupCloseBtn) {
+      popupCloseBtn.addEventListener("click", () => {
+        popupOverlay.classList.remove("active");
+      });
+    }
 
     popupOverlay.addEventListener("click", (e) => {
       if (e.target === popupOverlay) {
@@ -81,12 +82,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Kontaktformulär
+  // --- Kontaktformulär validering ---
   const form = document.getElementById("kontaktformulär");
   const feedback = document.getElementById("feedback");
 
   if (form && feedback) {
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", (e) => {
       e.preventDefault();
 
       const namn = document.getElementById("namn").value.trim();
@@ -105,19 +106,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Parallax scroll för bakgrund
+  // --- Parallax scroll på bakgrund ---
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     document.body.style.backgroundPosition = `center ${scrollY * 0.5}px`;
   });
 
-  // Dropdown-meny
+  // --- Dropdown meny ---
   const dropdown = document.querySelector('.dropdown > a');
-  const menu = dropdown?.nextElementSibling;
+  const menu = dropdown ? dropdown.nextElementSibling : null;
 
   if (dropdown && menu) {
-    dropdown.addEventListener('click', function (e) {
+    dropdown.addEventListener('click', (e) => {
       e.preventDefault();
+
+      // Dölj andra dropdown-menyer (om fler finns)
       document.querySelectorAll('.dropdown-menu').forEach(m => {
         if (m !== menu) m.style.display = 'none';
       });
@@ -125,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
       menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
     });
 
-    document.addEventListener('click', function (e) {
+    document.addEventListener('click', (e) => {
       if (!e.target.closest('.dropdown')) {
         menu.style.display = 'none';
       }
@@ -133,37 +136,37 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- Slideshow ---
-
   let slideIndex = 1;
 
   function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1;}
-    if (n < 1) {slideIndex = slides.length;}
-    for (i = 0; i < slides.length; i++) {
+    const slides = document.getElementsByClassName("mySlides");
+    const dots = document.getElementsByClassName("dot");
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
+
+    for (let i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
+    for (let i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
   }
 
-  window.plusSlides = function(n) {
+  window.plusSlides = function (n) {
     showSlides(slideIndex += n);
   }
 
-  window.currentSlide = function(n) {
+  window.currentSlide = function (n) {
     showSlides(slideIndex = n);
   }
 
   showSlides(slideIndex);
 });
 
-// Funktion att visa popup externt
+// --- Externa funktioner för popup och bokningsmeddelande ---
 function showPopup() {
   const popupOverlay = document.querySelector(".popup-overlay");
   if (popupOverlay) {
@@ -171,7 +174,6 @@ function showPopup() {
   }
 }
 
-// Funktion för bokningsmeddelande externt
 function visaBokningsmeddelande() {
   const meddelande = document.getElementById("bokningsmeddelande");
   if (meddelande) {
