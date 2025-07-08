@@ -70,6 +70,37 @@
     <section id="hitta-hit" class="section amarante-section kurale-section">
       <h1>Hitta hit</h1>
       <img src="images/roadmap.png" alt="Bild på karta" class="image-section" />
+      <!-- Google Maps JavaScript API -->
+  <script>
+    function initMap() {
+      const saoPaulo = { lat: -23.55052, lng: -46.633308 }; // Exempel: São Paulo
+
+      const map = new google.maps.Map(document.getElementById("map"), {
+        center: bosqueNordico,
+        zoom: 12,
+        styles: [
+          { elementType: "geometry", stylers: [{ color: "#fdf6e3" }] },
+          { elementType: "labels.text.fill", stylers: [{ color: "#7b5e3d" }] },
+          { elementType: "labels.text.stroke", stylers: [{ color: "#fdf6e3" }] },
+          { featureType: "road", elementType: "geometry", stylers: [{ color: "#e7d7b1" }] },
+          { featureType: "water", elementType: "geometry", stylers: [{ color: "#d4c7a0" }] },
+          { featureType: "poi", elementType: "geometry", stylers: [{ color: "#f0e4ca" }] },
+          { featureType: "landscape", elementType: "geometry", stylers: [{ color: "#f6eddc" }] }
+        ]
+      });
+
+      // Valfri markör
+      new google.maps.Marker({
+        position: bosqueNordico,
+        map: map,
+        title: "Bosque Nórdico"
+      });
+    }
+  </script>
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=DIN_API_NYCKEL&callback=initMap">
+  </script>
       <p>Det kan tyckas som att det bör vara en väl bevarad hemlighet men vi hjälper dig att hitta hit.</p>
     </section>
 
