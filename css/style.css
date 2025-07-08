@@ -124,6 +124,7 @@ main {
   width: 50%;
   max-height: auto;
   object-fit: contain;
+  text-align: center;
   margin: 0;
 }
 
