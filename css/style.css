@@ -109,7 +109,7 @@ main {
   position: relative;
   border-radius: 2px;
   z-index: 1;
-  color: #F0EAD6;
+  color: white;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
