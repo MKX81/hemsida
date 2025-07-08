@@ -9,9 +9,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
   />
-  <link rel="icon" href="images/favicon.png" type="image/png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link
     href="https://fonts.googleapis.com/css2?family=Amarante&family=Kurale&display=swap"
     rel="stylesheet"
@@ -31,14 +29,18 @@
       margin: 0;
       padding: 0;
       font-family: "Kurale", serif;
-      scroll-behavior: smooth;
       color: #2d2d2d;
 
-      /* Bakgrund på body */
-      background-image: url("../images/rainforest-2.jpg");
+      background-image: url("images/rainforest-2.jpg");
       background-size: cover;
       background-position: center center;
       background-attachment: fixed;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     /* Header / Navbar */
@@ -46,7 +48,7 @@
       position: fixed;
       width: 100%;
       top: 0;
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.85);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       z-index: 1000;
     }
@@ -95,34 +97,33 @@
       cursor: pointer;
     }
 
-    /* Hero Section */
-    .hero-image {
-      min-height: 100vh;
+    /* Main och hero-text */
+    main {
+      flex: 1;
       display: flex;
-      align-items: center;
       justify-content: center;
-      position: relative;
+      align-items: center;
+      padding-top: 70px; /* plats för header */
+      padding-bottom: 2rem;
       text-align: center;
-      padding: 0 1rem;
-      background: transparent; /* inget egen bakgrund */
-      margin-top: 70px; /* för att ge plats åt headern */
     }
 
-    .hero-text {
+    .hero-text-box {
       background: rgba(255, 255, 255, 0.85);
       padding: 2rem;
       border-radius: 12px;
       max-width: 600px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
     }
 
-    .hero-text h1 {
-      font-size: 3rem;
+    .hero-text-box h1 {
       font-family: "Amarante", cursive;
+      font-size: 3rem;
       color: #4d6b57;
       margin-bottom: 1rem;
     }
 
-    .hero-text p {
+    .hero-text-box p {
       font-size: 1.3rem;
       margin-bottom: 1.5rem;
     }
@@ -179,12 +180,10 @@
         flex-direction: column;
         background-color: rgba(255, 255, 255, 0.95);
 
-        /* Dölj som standard */
         display: none;
         padding: 1rem 0;
         text-align: center;
 
-        /* Animation */
         transition: all 0.3s ease;
         opacity: 0;
         transform: translateY(-10px);
@@ -210,11 +209,11 @@
       <div class="logo">Bosque Nórdico</div>
 
       <!-- Hamburger-knapp -->
-      <div class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" role="button" tabindex="0">
+      <div class="menu-toggle" id="menu-toggle" aria-label="Menu Toggle" tabindex="0">
         <i class="fas fa-bars"></i>
       </div>
 
-      <!-- Meny-länkar -->
+      <!-- Länkar -->
       <ul class="nav-links" id="nav-links">
         <li><a href="#sobre">Sobre nós</a></li>
         <li><a href="#acomodacoes">Acomodações</a></li>
@@ -224,12 +223,10 @@
   </header>
 
   <main>
-    <section class="hero-image">
-      <div class="hero-text">
-        <h1>Bosque Nórdico</h1>
-        <p>Um pedaço da Escandinávia no coração do sul do Brasil.</p>
-        <a href="#sobre" class="hero-button">Sobre nós</a>
-      </div>
+    <section class="hero-text-box" role="main">
+      <h1>Bosque Nórdico</h1>
+      <p>Um pedaço da Escandinávia no coração do sul do Brasil.</p>
+      <a href="#sobre" class="hero-button">Sobre nós</a>
     </section>
   </main>
 
@@ -242,19 +239,26 @@
       <a href="https://wa.me/123456789" target="_blank" aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i>
       </a>
-      <a href="https://google.se/maps..." target="_blank" aria-label="Google Maps">
+      <a href="https://google.se/maps" target="_blank" aria-label="Google Maps">
         <i class="fas fa-map-marker-alt"></i>
       </a>
     </div>
   </footer>
 
   <script>
-    // Toggle meny på mobil
-    const menuToggle = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
+    // Hamburgermeny toggle
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav-links');
 
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    // Stäng meny vid klick på länk
+    document.querySelectorAll('#nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+      });
     });
   </script>
 </body>
