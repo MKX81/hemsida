@@ -13,7 +13,10 @@
 .mySlides {
   display: none;
 }
-
+.mySlides img {
+  width: 100%;
+  display: block;
+  border-radius: inherit;
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
