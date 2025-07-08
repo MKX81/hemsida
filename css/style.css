@@ -14,6 +14,12 @@ body {
   will-change: transform;
 }
 
+body {
+  outline: 2px solid red;
+  overflow-x: hidden; /* Om du vill dölja sidscroll för test */
+}
+
+
 /* --- HEADER MENY --- */
 header {
   position: fixed;
