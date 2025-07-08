@@ -94,3 +94,29 @@ window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
   document.body.style.backgroundPosition = `center ${scrollY * 0.5}px`;
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const dropdown = document.querySelector('.dropdown > a');
+  const menu = dropdown?.nextElementSibling;
+
+  if (dropdown && menu) {
+    dropdown.addEventListener('click', function (e) {
+      e.preventDefault();
+      // Stäng alla andra öppna dropdowns (valfritt)
+      document.querySelectorAll('.dropdown-menu').forEach(m => {
+        if (m !== menu) m.style.display = 'none';
+      });
+
+      // Toggle meny
+      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+    });
+
+    // Klick utanför dropdown stänger menyn (valfritt)
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.dropdown')) {
+        menu.style.display = 'none';
+      }
+    });
+  }
+});
+
