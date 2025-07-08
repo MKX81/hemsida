@@ -120,3 +120,27 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("kontaktformulär");
+  const feedback = document.getElementById("feedback");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Hämta fältvärden
+    const namn = document.getElementById("namn").value.trim();
+    const epost = document.getElementById("epost").value.trim();
+    const meddelande = document.getElementById("meddelande").value.trim();
+
+    if (!namn || !epost || !meddelande) {
+      feedback.textContent = "Fyll i alla fält.";
+      feedback.style.color = "red";
+      return;
+    }
+
+    // Simulera skickat meddelande
+    feedback.textContent = "Tack för ditt meddelande!";
+    feedback.style.color = "green";
+    form.reset();
+  });
+});
