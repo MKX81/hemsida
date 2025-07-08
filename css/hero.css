@@ -7,10 +7,7 @@ body, html {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/rainforest-2.jpg');
 
-  /* Set a specific height */
-  height: 50%;
-
-  /* Position and center the image to scale nicely on all screens */
+height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -24,5 +21,5 @@ body, html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: #333333;
 }
