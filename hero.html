@@ -5,35 +5,223 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bosque Nórdico</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="css/hero.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
   <link rel="icon" href="images/favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amarante&family=Kurale&display=swap"
+    rel="stylesheet"
+  />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Kurale&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & grundinställningar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <script defer src="js/script.js"></script>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: "Kurale", serif;
+      scroll-behavior: smooth;
+      color: #2d2d2d;
+
+      /* Bakgrund på body */
+      background-image: url("../images/rainforest-2.jpg");
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+    }
+
+    /* Header / Navbar */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-family: "Amarante", cursive;
+      font-size: 1.8rem;
+      color: #4d6b57;
+    }
+
+    /* Navigation links (desktop) */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+      transition: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #4d6b57;
+    }
+
+    /* Hamburger-meny */
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      color: #4d6b57;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero-image {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+      padding: 0 1rem;
+      background: transparent; /* inget egen bakgrund */
+      margin-top: 70px; /* för att ge plats åt headern */
+    }
+
+    .hero-text {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 600px;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      font-family: "Amarante", cursive;
+      color: #4d6b57;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-button {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background-color: #4d6b57;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .hero-button:hover {
+      background-color: #355143;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #f4f4f4;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .social-icons {
+      margin-top: 0.5rem;
+    }
+
+    .social-icons a {
+      color: #4d6b57;
+      margin: 0 0.5rem;
+      font-size: 1.3rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #2a3d31;
+    }
+
+    /* Responsiv design – mobil och surfplatta */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.95);
+
+        /* Dölj som standard */
+        display: none;
+        padding: 1rem 0;
+        text-align: center;
+
+        /* Animation */
+        transition: all 0.3s ease;
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+      }
+
+      .nav-links.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: all;
+      }
+
+      .nav-links li {
+        margin: 1rem 0;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>
-  <nav class="navbar">
-    <div class="logo">Bosque Nórdico</div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Bosque Nórdico</div>
 
-    <!-- Hamburger-knapp -->
-    <div class="menu-toggle" id="menu-toggle">
-      <i class="fas fa-bars"></i>
-    </div>
+      <!-- Hamburger-knapp -->
+      <div class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" role="button" tabindex="0">
+        <i class="fas fa-bars"></i>
+      </div>
 
-    <!-- Länkar -->
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#sobre">Sobre nós</a></li>
-      <li><a href="#acomodacoes">Acomodações</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </nav>
-</header>
-
+      <!-- Meny-länkar -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="#acomodacoes">Acomodações</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
     <section class="hero-image">
@@ -48,10 +236,26 @@
   <footer>
     <p>&copy; 2025 Bosque Nórdico</p>
     <div class="social-icons">
-      <a href="https://instagram.com/dittkonto" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://wa.me/123456789" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://google.se/maps..." target="_blank" aria-label="Google Maps"><i class="fas fa-map-marker-alt"></i></a>
+      <a href="https://instagram.com/dittkonto" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/123456789" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://google.se/maps..." target="_blank" aria-label="Google Maps">
+        <i class="fas fa-map-marker-alt"></i>
+      </a>
     </div>
   </footer>
+
+  <script>
+    // Toggle meny på mobil
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
