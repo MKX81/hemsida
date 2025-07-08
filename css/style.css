@@ -39,6 +39,10 @@ header {
 /* När header får klassen .transparent ändras bakgrund och textfärg */
 header.transparent {
   background: transparent;
+  backdrop-filter: none
+  -webkit-backdrop-filter: none; 
+  box-shadow: none;
+  border-bottom: none;
 }
 
 /* Menytitel högst upp till vänster */
