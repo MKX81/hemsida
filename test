@@ -11,13 +11,14 @@
     />
 
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/test.css" />
   <link rel="icon" href="images/favicon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Kurale&family=Ruge+Boogie&display=swap" rel="stylesheet">
 
  
-  <script defer src="js/script.js"></script>
+  <script defer src="js/test.js"></script>
 
 </head>
   <body>
@@ -39,27 +40,18 @@
 <section id="spacer" class="spacer"></section>
 <section class="slideshow-container">
   <div class="slide fade">
-    <img src="images/bild1.jpg" alt="Bild 1" />
+    <img src="images/logo-draft.png" alt="Bild 1" />
   </div>
 
   <div class="slide fade">
-    <img src="images/bild2.jpg" alt="Bild 2" />
+    <img src="images/calendar-1.jpg" alt="Bild 2" />
   </div>
 
   <div class="slide fade">
-    <img src="images/bild3.jpg" alt="Bild 3" />
+    <img src="images/about-us-1.jpg" alt="Bild 3" />
   </div>
 </section>
 
   </main>
-
-  <!-- Popup-exempel (inaktiv till att börja med, visa via JS när du vill) -->
-  <div class="popup-overlay" id="popupMessage">
-    <div class="popup-content">
-      <button class="close-btn" aria-label="Stäng popup" onclick="document.getElementById('popupMessage').classList.remove('active')">&times;</button>
-      <h2>Information</h2>
-      <p>Tack för din bokning! Vi återkommer inom kort.</p>
-    </div>
-  </div>
 </body>
 </html>
