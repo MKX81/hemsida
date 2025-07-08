@@ -32,10 +32,26 @@ header {
   box-sizing: border-box;
   backdrop-filter: blur(5px);
 }
-
-header.hidden {
-  transform: translateY(-100%);
+header.transparent {
+  background: transparent;
 }
+
+header.transparent .menu-links a,
+header.transparent .menu-title {
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.menu-title {
+  font-size: 3rem; /* eller den storlek du vill */
+  color: #333333;  /* standardfärg */
+  align-self: flex-start;
+  padding-left: 1rem;
+  margin: 0;
+  user-select: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
 
 /* Menylänkar i horisontell rad */
 .menu-links {
