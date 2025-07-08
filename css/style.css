@@ -117,6 +117,13 @@ main {
       1px  1px 0 black;
 }
 
+.image-welcome-section {
+  width: 80%;
+  max-height: 8rem;
+  object-fit: contain;
+  margin: 0;
+}
+
 /* Boxar för länkar, t ex bokning eller menyer */
 .link-box {
   border: 2px solid #009739;
