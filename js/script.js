@@ -1,28 +1,41 @@
-// script.js
-
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector('header');
   let hideTimeout;
 
-  // Funktion för att visa menyn och starta timer för att gömma den
-  function showMenu() {
-    header.classList.remove('hidden');
-    document.body.classList.remove('menu-hidden');
+  // Gör header "opaque" (normal bakgrund och textfärg)
+  function makeOpaque() {
+    header.classList.remove('transparent');
+  }
+
+  // Gör header transparent (ingen bakgrund, vit text)
+  function makeTransparent() {
+    header.classList.add('transparent');
+  }
+
+  // Starta/timern som byter till transparent efter 3 sek utan musrörelse
+  function resetTimer() {
+    makeOpaque();
     clearTimeout(hideTimeout);
     hideTimeout = setTimeout(() => {
-      header.classList.add('hidden');
-      document.body.classList.add('menu-hidden');
-    }, 3000); // göm efter 3 sek utan rörelse
+      makeTransparent();
+    }, 3000);
   }
 
-  // Visa menyn initialt
-  showMenu();
+  // Visa header som opaque initialt
+  makeOpaque();
 
+  // Lyssna på musrörelse
   window.addEventListener('mousemove', (e) => {
-  if (e.clientY < 50) {  // Om musen är inom 50px från toppen
-    showMenu();
-  }
-});
+    if (e.clientY < 50) {
+      makeOpaque();
+      clearTimeout(hideTimeout);
+    } else {
+      resetTimer();
+    }
+  });
+
+  // Starta timer direkt
+  resetTimer();
 
   // --- INFO-BANNER: klicka för att stänga ---
   const infoBanner = document.querySelector(".info-banner");
@@ -67,9 +80,8 @@ function visaBokningsmeddelande() {
     meddelande.style.marginTop = "1rem";
   }
 }
+
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
-  // Flytta bakgrundsposition vertikalt, t.ex. hälften av scrollvärdet
   document.body.style.backgroundPosition = `center ${scrollY * 0.5}px`;
 });
-
