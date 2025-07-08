@@ -1,34 +1,88 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kontakta oss</title>
-   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/contacto.css" />
+  <title>Bosque Nórdico</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+  <link rel="stylesheet" href="css/style.css" />
+   <link rel="stylesheet" href="css/contacto.css" />
+  <link rel="icon" href="images/favicon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kurale&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amarante&family=Kurale&family=Ruge+Boogie&display=swap" rel="stylesheet">
+
+ 
   <script defer src="js/script.js"></script>
-</head>
 <body>
+ <header>
+  <nav class="main-nav" aria-label="Huvudmeny">
+    <a href="index.html" class="logo-link">
+      <img src="assets/homo-logo.png" alt="Bosque Nórdico home" />
+    </a>
+    <ul class="menu-links">
+      <li><a href="#Boende">Boende</a></li>
+      <li><a href="meny.html">Mat och dryck</a></li>
+      <li><a href="#hitta-hit">Hitta hit</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <main class="kontakt-wrapper">
-    <h1>Kontakta oss</h1>
-    <form id="kontaktformulär">
-      <label for="namn">Namn:</label>
-      <input type="text" id="namn" name="namn" required />
+  <main>
+    <section id="start" class="section bg-fixed" style="background-image: url('images/skog.jpg');">
+      <h1>Välkommen till vårt Bed & Breakfast</h1>
+      <p>En harmonisk plats där Sverige möter Brasilien.</p>
+    </section>
 
-      <label for="epost">E-post:</label>
-      <input type="email" id="epost" name="epost" required />
+    <section id="hitta-hit" class="section bg-fixed" style="background-image: url('images/karta.jpg');">
+      <h2>Hitta hit</h2>
+      <p>Vi finns mitt i naturen, men lättillgängliga med bil och buss.</p>
+    </section>
 
-      <label for="meddelande">Meddelande:</label>
-      <textarea id="meddelande" name="meddelande" rows="5" required></textarea>
+    <section id="boka" class="section">
+      <h2>Boka</h2>
+      <button onclick="visaBokningsmeddelande()">Boka ditt rum</button>
+      <p id="bokningsmeddelande"></p>
+    </section>
 
-      <button type="submit">Skicka</button>
-      <p id="feedback" class="feedback"></p>
-    </form>
-  </main>
+    <section id="mat" class="section bg-fixed" style="background-image: url('images/brasiliansk-mat.jpg');">
+      <h2>Mat</h2>
+      <p>Njut av svenska frukostar och brasilianska smaker.</p>
+    </section>
 
+    <section id="om-oss" class="section">
+      <h2>Om oss</h2>
+      <p>Vi är ett svensk-brasilianskt par som driver detta B&B med kärlek.</p>
+    </section>
+
+    <section id="kontakt" class="section">
+      <h2>Kontakt</h2>
+      <p>Har du frågor? Kontakta oss gärna via formuläret nedan.</p>
+      <a href="kontakt.html" class="kontakt-knapp">Gå till kontaktformulär</a>
+    </section>
+
+<section id="spacer" class="spacer"></section>  
+  
+</main>
+
+  <footer>
+    <p>&copy; 2025 Bosque Nórdico</p>
+    <div class="social-icons">
+      <a href="https://instagram.com/dittkonto" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/123456789" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+       <a href="https://google.se/maps..." target="_blank" aria-label="Google Maps">
+        <i class="fas fa-map-marker-alt"></i>
+      </a>
+    </div>
+  </footer>
 </body>
 </html>
