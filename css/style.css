@@ -12,9 +12,6 @@ body {
   color: #2d2d2d;
   z-index: 1;
   will-change: transform;
-}
-
-body {
   outline: 2px solid red;
   overflow-x: hidden; /* Om du vill dölja sidscroll för test */
 }
