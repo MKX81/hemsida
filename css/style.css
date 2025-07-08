@@ -122,11 +122,15 @@ main {
 
 .image-welcome-section {
   width: 50%;
-  max-height: auto;
-  object-fit: contain;
-  text-align: center;
-  margin: 0;
+  height: 200px; /* sätt en höjd, annars syns inte bakgrunden */
+  background-image: url('../images/logo-draft.png');
+  background-repeat: no-repeat;
+  background-position: center center; /* centrerar bilden i blocket */
+  background-size: contain; /* skala bilden så den ryms inom blocket */
+  margin: 0 auto; /* centrerar blocket horisontellt */
 }
+
+
 
 /* Boxar för länkar, t ex bokning eller menyer */
 .link-box {
