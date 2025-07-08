@@ -121,8 +121,8 @@ main {
 }
 
 .image-welcome-section {
-  width: 50%;
-  height: 200px; /* sätt en höjd, annars syns inte bakgrunden */
+  width: 100%;
+  height: 300px; /* sätt en höjd, annars syns inte bakgrunden */
   background-image: url('../images/logo-draft.png');
   background-repeat: no-repeat;
   background-position: center center; /* centrerar bilden i blocket */
