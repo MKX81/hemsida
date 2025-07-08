@@ -35,6 +35,18 @@ body {
   user-select: none;
   box-sizing: border-box;
 }
+.menu-links {
+  display: flex;
+  flex-direction: row; /* horisontell rad */
+  gap: 4rem;
+  justify-content: center;
+  padding: 0;
+  margin-top: 50px;
+  list-style: none;
+  width: 100%;
+  max-width: 1024px;
+}
+
 
 /* Titel och länkar får lätt skugga för bättre läsbarhet */
 .menu-title,
