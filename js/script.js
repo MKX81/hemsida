@@ -25,14 +25,23 @@ document.addEventListener("DOMContentLoaded", () => {
   makeOpaque();
 
   // Lyssna på musrörelse
-  window.addEventListener('mousemove', (e) => {
-    if (e.clientY < 50) {
-      makeOpaque();
-      clearTimeout(hideTimeout);
-    } else {
-      resetTimer();
-    }
-  });
+window.addEventListener('mousemove', (e) => {
+  const headerRect = header.getBoundingClientRect();
+  
+  // Kolla om musen är inom header-området
+  if (
+    e.clientY >= headerRect.top &&
+    e.clientY <= headerRect.bottom &&
+    e.clientX >= headerRect.left &&
+    e.clientX <= headerRect.right
+  ) {
+    makeOpaque();
+    clearTimeout(hideTimeout);
+  } else {
+    resetTimer();
+  }
+});
+
 
   // Starta timer direkt
   resetTimer();
