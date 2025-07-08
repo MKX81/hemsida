@@ -5,6 +5,7 @@
   max-width: 1000px;
   position: relative;
   margin: auto;
+  border-radius: 10px;
 }
 
 /* Hide the images by default */
