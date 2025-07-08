@@ -45,7 +45,7 @@ header.transparent {
 .menu-title {
   align-self: flex-start;  /* vänsterställd */
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #333333;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   transition: color 0.3s ease, text-shadow 0.3s ease;
@@ -86,8 +86,6 @@ header.transparent .menu-title {
 
 /* Länk hover */
 .menu-links a:hover {
-  color: #007a3d;
-  font-size: 1.75rem;
   text-shadow: 0 0 8px rgba(0, 122, 61, 0.6);
 }
 
