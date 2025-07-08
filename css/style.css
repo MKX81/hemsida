@@ -70,7 +70,7 @@ header.hidden {
 
 
 main {
-  padding-top: 2rem;
+  padding-top: 1rem;
   max-width: 1024px;
   margin: 0 auto;
   border-radius: 10px;
@@ -115,15 +115,14 @@ main {
   text-align: center;
   background: rgba(255, 255, 255, 0.9);
   position: relative;
-  border-radius: 10px;
+  border-radius: 2px;
   z-index: 1;
 }
 .image-section {
   width: 30%;
   max-height: 5rem;
   object-fit: contain;
-  border-radius: 10px;
-  margin: 0.5rem 0;
+  margin: 0.4rem 0;
 }
 
 /* Boxar för länkar, t ex bokning eller menyer */
