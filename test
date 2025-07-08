@@ -37,45 +37,20 @@
 
   <main>
 <section id="spacer" class="spacer"></section>
-<section id="start" class="section welcome-section amarante-section kurale-section">
-<h1>Bem-vindos ao seu oásis nórdico.</h1>
+<section class="slideshow-container">
+  <div class="slide fade">
+    <img src="images/bild1.jpg" alt="Bild 1" />
+  </div>
+
+  <div class="slide fade">
+    <img src="images/bild2.jpg" alt="Bild 2" />
+  </div>
+
+  <div class="slide fade">
+    <img src="images/bild3.jpg" alt="Bild 3" />
+  </div>
 </section>
-<section id="logo-draft" class="image-welcome-section"></section>
 
-
-    <section id="bokningar" class="section amarante-section kurale-section">
-      <h1>Reservationer</h1>
-       <img src="images/date.png" alt="Bild på kalender" class="image-section" />
-      <p>Här kan du boka din vistelse hos oss online. Du kan även kontakta oss och göra bokningar via Instagram eller Whatsapp.</p>
-      <a href="boka.html" class="knapp">Boka bord för lunch eller middag online</a>
-      <a href="boka.html" class="knapp">Boka boende online</a>
-    </section>
-
-    <section id="start" class="section amarante-section kurale-section">
-      <h1>Mat & Dryck</h1>
-      <img src="images/pineapple.png" alt="Bild på ananas" class="image-section" />
-      <p>Njut av svenska frukostar, "fika" och brasilianska smaker.</p>
-      <a href="meny.html" class="knapp">Läs om vår mat</a>
-    </section>
-    
-    <section id="hitta-hit" class="section amarante-section kurale-section">
-      <h1>Hitta hit</h1>
-      <img src="images/roadmap.png" alt="Bild på karta" class="image-section" />
-      <p>Det kan tyckas som att det bör vara en väl bevarad hemlighet men vi hjälper dig att hitta hit.</p>
-    </section>
-
-    <section id="start" class="section amarante-section kurale-section">
-      <h1>Vår historia</h1>
-      <p>Vi är ett svensk-brasilianskt par som driver Bosque Nórdico med kärlek till Sverige och Brasilien.</p>
-    </section>
-
-    <section id="start" class="section amarante-section kurale-section">
-      <h1>Kontakt</h1>
-      <p>Har du frågor? Kontakta oss gärna via formuläret nedan.</p>
-      <a href="kontakt.html" class="knapp">Kontakta oss (gärna)</a>
-    </section>
-
-    <section id="spacer" class="spacer"></section>
   </main>
 
   <!-- Popup-exempel (inaktiv till att börja med, visa via JS när du vill) -->
