@@ -63,11 +63,3 @@ button:hover {
   color: green;
 }
 
-main {
-  background-color: rgba(255, 0, 0, 0.1); /* lätt röd ton för att se bredden */
-}
-
-.kontakt-wrapper {
-  background-color: rgba(0, 255, 0, 0.2); /* grön ton */
-}
-
