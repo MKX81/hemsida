@@ -28,37 +28,7 @@ header {
   padding: 0.5rem 1rem;
 
   background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: saturate(180%) blur(10px);
-  -webkit-backdrop-filter: saturate(180%) blur(10px);
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-
-  transition: background 0.3s ease;
-}
-
-/* När header får klassen .transparent ändras bakgrund och textfärg */
-header.transparent {
-  background: transparent;
-  backdrop-filter: none
-  -webkit-backdrop-filter: none; 
-  box-shadow: none;
-  border-bottom: none;
-}
-
-/* Menytitel högst upp till vänster */
-.menu-title {
-  align-self: flex-start;  /* vänsterställd */
-  font-size: 3rem;
-  font-weight: 600;
-  color: #333333;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-/* När header är transparent ändras menytitelns färg */
-header.transparent .menu-title {
-  color: white;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 /* Menylänkar i horisontell rad, centrerade */
@@ -69,39 +39,19 @@ header.transparent .menu-title {
   margin-top: 0.5rem;
 
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   justify-content: center;
   width: 100%;
-  max-width: 1024px;
 }
 
 /* Menylänk */
 .menu-links a {
   color: #333333;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1.5rem;
+  font-weight: 400;
+  font-size: 1rem;
   transition: color 0.3s ease, font-size 0.3s ease, text-shadow 0.3s ease;
   cursor: pointer;
-  padding: 0.25rem 0;
-  display: inline-block;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.15);
-}
-
-/* Länk hover */
-.menu-links a:hover {
-  text-shadow: 0 0 8px rgba(0, 122, 61, 0.6);
-}
-
-/* När header är transparent ska menylänkar också vara vita */
-header.transparent .menu-links a {
-  color: white;
-  background: transparent;
-  backdrop-filter: none; 
-  -webkit-backdrop-filter: none;
-  box-shadow: none; 
-  border-bottom: none;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 
@@ -112,21 +62,6 @@ main {
   border-radius: 10px;
   position: relative;
   z-index: 1;
-}
-.title {
-  position: fixed;
-  top: 0.5rem;
-  left: 1.5rem;
-  font-size: 3rem;
-  color: #333333;
-  font-weight: 700;
-  z-index: 1200;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.menu-hidden .title {
-  color: white;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .amarante-section h1 {
@@ -292,9 +227,9 @@ footer {
 }
 
 .spacer {
-  height: 10vh;        /* justera höjden efter behov */
-  background-color: transparent; /* helt genomskinlig */
-  width: 100%;         /* tar full bredd */
+  height: 5vh;
+  background-color: transparent;
+  width: 100%;
 }
 
 /* Responsiv justering av menylänkar (om du vill) */
