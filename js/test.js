@@ -1,5 +1,3 @@
-console.log("JS körs!");
-
 let slideIndex = 0;
 showSlides();
 
