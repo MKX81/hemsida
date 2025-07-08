@@ -110,7 +110,11 @@ main {
   border-radius: 2px;
   z-index: 1;
   color: white;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  text-shadow:
+     -1px -1px 0 black,
+      1px -1px 0 black,
+     -1px  1px 0 black,
+      1px  1px 0 black;
 }
 
 /* Boxar för länkar, t ex bokning eller menyer */
