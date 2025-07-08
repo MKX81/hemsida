@@ -109,7 +109,8 @@ main {
   position: relative;
   border-radius: 2px;
   z-index: 1;
-  text-color: white;
+  color: #F0EAD6;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
 /* Boxar för länkar, t ex bokning eller menyer */
