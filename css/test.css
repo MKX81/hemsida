@@ -6,6 +6,7 @@
   position: relative;
   margin: auto;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 /* Hide the images by default */
