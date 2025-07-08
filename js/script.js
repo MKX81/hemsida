@@ -21,6 +21,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   makeOpaque();
 
+  document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav-links");
+  const navLinks = document.querySelectorAll("#nav-links a");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("active");
+    });
+  });
+});
+
+
   window.addEventListener('mousemove', (e) => {
     const headerRect = header.getBoundingClientRect();
 
