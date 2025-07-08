@@ -3,9 +3,6 @@ body {
   font-family: 'Kurale', serif;
   background: url('../images/rainforest-2.jpg') no-repeat center center;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
 }
 
