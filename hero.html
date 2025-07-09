@@ -5,215 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bosque Nórdico</title>
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Amarante&family=Kurale&display=swap"
-    rel="stylesheet"
-  />
-
-  <style>
-    /* Reset & grundinställningar */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      font-family: "Kurale", serif;
-      color: #2d2d2d;
-
-      background-image: url("images/rainforest-2.jpg");
-      background-size: cover;
-      background-position: center center;
-      background-attachment: fixed;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    /* Header / Navbar */
-    header {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background: rgba(255, 255, 255, 0.85);
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-    }
-
-    .logo {
-      font-family: "Amarante", cursive;
-      font-size: 1.8rem;
-      color: #4d6b57;
-    }
-
-    /* Navigation links (desktop) */
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-
-      opacity: 1;
-      transform: none;
-      pointer-events: auto;
-      transition: none;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #4d6b57;
-    }
-
-    /* Hamburger-meny */
-    .menu-toggle {
-      display: none;
-      font-size: 1.8rem;
-      color: #4d6b57;
-      cursor: pointer;
-    }
-
-    /* Main och hero-text */
-    main {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-top: 70px; /* plats för header */
-      padding-bottom: 2rem;
-      text-align: center;
-    }
-
-    .hero-text-box {
-      background: rgba(255, 255, 255, 0.85);
-      padding: 2rem;
-      border-radius: 12px;
-      max-width: 600px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    }
-
-    .hero-text-box h1 {
-      font-family: "Amarante", cursive;
-      font-size: 3rem;
-      color: #4d6b57;
-      margin-bottom: 1rem;
-    }
-
-    .hero-text-box p {
-      font-size: 1.3rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-button {
-      display: inline-block;
-      padding: 0.8rem 1.5rem;
-      background-color: #4d6b57;
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .hero-button:hover {
-      background-color: #355143;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #f4f4f4;
-      padding: 1rem;
-      text-align: center;
-      margin-top: 0;
-    }
-
-    .social-icons {
-      margin-top: 0.5rem;
-    }
-
-    .social-icons a {
-      color: #4d6b57;
-      margin: 0 0.5rem;
-      font-size: 1.3rem;
-      transition: color 0.3s;
-    }
-
-    .social-icons a:hover {
-      color: #2a3d31;
-    }
-
-    /* Responsiv design – mobil och surfplatta */
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-
-      .nav-links {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.95);
-
-        display: none;
-        padding: 1rem 0;
-        text-align: center;
-
-        transition: all 0.3s ease;
-        opacity: 0;
-        transform: translateY(-10px);
-        pointer-events: none;
-      }
-
-      .nav-links.active {
-        display: flex;
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: all;
-      }
-
-      .nav-links li {
-        margin: 1rem 0;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Kurale&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
     <nav class="navbar">
       <div class="logo">Bosque Nórdico</div>
-
-      <!-- Hamburger-knapp -->
       <div class="menu-toggle" id="menu-toggle" aria-label="Menu Toggle" tabindex="0">
         <i class="fas fa-bars"></i>
       </div>
-
-      <!-- Länkar -->
       <ul class="nav-links" id="nav-links">
         <li><a href="#sobre">Sobre nós</a></li>
         <li><a href="#acomodacoes">Acomodações</a></li>
@@ -221,6 +23,32 @@
       </ul>
     </nav>
   </header>
+
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-box">
+        <img src="images/box1.jpg" alt="Skog 1">
+        <div class="hero-content">
+          <h3>Stuga i skogen</h3>
+          <p>Rustik charm bland tallarna.</p>
+        </div>
+      </div>
+      <div class="hero-box">
+        <img src="images/box2.jpg" alt="Skog 2">
+        <div class="hero-content">
+          <h3>Vedeldad bastu</h3>
+          <p>Avkoppling på nordiskt vis.</p>
+        </div>
+      </div>
+      <div class="hero-box">
+        <img src="images/box3.jpg" alt="Skog 3">
+        <div class="hero-content">
+          <h3>Naturupplevelser</h3>
+          <p>Vandring, fågelskådning och tystnad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <main>
     <section class="hero-text-box" role="main">
@@ -246,19 +74,11 @@
   </footer>
 
   <script>
-    // Hamburgermeny toggle
     const toggle = document.getElementById('menu-toggle');
     const nav = document.getElementById('nav-links');
-
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
-
-    // Stäng meny vid klick på länk
+    toggle.addEventListener('click', () => nav.classList.toggle('active'));
     document.querySelectorAll('#nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('active');
-      });
+      link.addEventListener('click', () => nav.classList.remove('active'));
     });
   </script>
 </body>
