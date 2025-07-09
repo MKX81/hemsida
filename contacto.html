@@ -78,12 +78,6 @@
         const epost = document.getElementById("epost").value.trim();
         const meddelande = document.getElementById("meddelande").value.trim();
 
-        if (!namn || !epost || !meddelande) {
-          feedback.textContent = "Fyll i alla fält.";
-          feedback.style.color = "#A24C3D";
-          return;
-        }
-
         feedback.textContent = "Obrigado por entrar em contato conosco! Retornaremos sua mensagem o mais breve possível.";
         feedback.style.color = "#E9A43D";
 
