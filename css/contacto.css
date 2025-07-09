@@ -1,9 +1,9 @@
 .kontakt-wrapper {
   background: rgba(255, 255, 255, 0.85);
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 15px;
-  width:90%;
-  margin: 3rem auto;
+  width:80%;
+  margin: 1.5rem auto;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
