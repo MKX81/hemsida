@@ -39,3 +39,99 @@
 .book-link:hover {
   background-color: #0056b3;
 }
+
+/* konfigurera */
+
+/* hero-sektion */
+.room-section {
+  padding: 80px 20px 40px;
+  max-width: 80%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  height: 100vh;
+  justify-content: center;
+  align-content: center;
+  box-sizing: border-box;
+}
+
+.room-box {
+  background: rgba(255, 255, 255, 0.20); /* halvtransparent vit */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);          
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.room-box:hover {
+  background: rgba(255, 255, 255, 0.3); /* lite ljusare vid hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* Text i boxarna */
+.room-content h3 {
+  color: var(--primary-green);
+  margin-bottom: 0.8rem;
+}
+
+.room-content p {
+  color: #444;
+  line-height: 1.4;
+}
+
+/* Hero-textbox under hero-sektionen */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px; /* Plats för fixed header */
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.room-text-box {
+  background: var(--light-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.room-text-box h1 {
+  font-family: "Amarante", cursive;
+  font-size: 3rem;
+  color: #4d6b57;
+  margin-bottom: 1rem;
+}
+
+.room-text-box p {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.room-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #4d6b57;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.room-button:hover {
+  background-color: #355143;
+}
