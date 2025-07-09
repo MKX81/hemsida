@@ -120,50 +120,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Slideshow ---
-  let slideIndex = 1;
 
-  function showSlides(n) {
-    const slides = document.getElementsByClassName("mySlides");
-    const dots = document.getElementsByClassName("dot");
-    if (n > slides.length) slideIndex = 1;
-    if (n < 1) slideIndex = slides.length;
-
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (let i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-  }
-
-  window.plusSlides = function (n) {
-    showSlides(slideIndex += n);
-  }
-
-  window.currentSlide = function (n) {
-    showSlides(slideIndex = n);
-  }
-
-  showSlides(slideIndex);
-});
-
-// --- Externa funktioner för popup och bokningsmeddelande ---
+// --- Externa funktioner för popup ---
 function showPopup() {
   const popupOverlay = document.querySelector(".popup-overlay");
   if (popupOverlay) {
     popupOverlay.classList.add("active");
-  }
-}
-
-function visaBokningsmeddelande() {
-  const meddelande = document.getElementById("bokningsmeddelande");
-  if (meddelande) {
-    meddelande.textContent = "Tack! Vi återkommer inom kort med en bekräftelse.";
-    meddelande.style.color = "#009739";
-    meddelande.style.marginTop = "1rem";
   }
 }
