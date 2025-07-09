@@ -201,17 +201,18 @@ main {
   color: #F5F1EC;
   margin: 0 0.5rem;
   font-size: 2rem;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
   display: inline-block;
   line-height: 1; /* Undvik höjdproblem */
 }
 
 .social-icons a:hover {
-  color: #1F382B;
+  color: #E9A43D;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .small-text-block {
-  font-size: 0.5rem;
+  font-size: 1rem;
   color: #F5F1EC;
   margin: 0.5rem auto; /* auto gör att den centreras horisontellt */
   line-height: 1.4;
