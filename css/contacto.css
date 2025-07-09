@@ -3,8 +3,7 @@
   border: 2px solid red;
   padding: 2rem;
   border-radius: 15px;
-  width:80%;
-  max-width: 80%;
+  width:1000px;
   margin: 3rem auto;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
