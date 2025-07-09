@@ -62,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
         nav.classList.remove('active');
       }
     });
-  }
 
   // --- Info-banner stängning ---
   const infoBanner = document.querySelector(".info-banner");
