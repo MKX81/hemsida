@@ -114,3 +114,15 @@ main {
   width: 100%;
 }
 
+.small-text-block {
+  font-size: 1rem;
+  color: #F5F1EC;
+  margin: 0.5rem auto; /* auto gör att den centreras horisontellt */
+  line-height: 1.4;
+  font-weight: normal;
+  font-family: inherit;
+  max-width: 400px;
+  text-align: center;
+}
+
+
