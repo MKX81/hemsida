@@ -94,7 +94,7 @@ footer {
   bottom: -4px;               /* Placering under texten */
   width: 100%;
   height: 2px;
-  background-color: #4d6b57;  /* Färgen på linjen */
+  background-color: var(--accent-yellow);  /* Färgen på linjen */
   transform: scaleX(0);       /* Börja "osynlig" */
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -216,7 +216,7 @@ main {
 }
 
 .social-icons a {
-  color: #F5F1EC;
+  color: var(--accent-yellow);
   margin: 0 0.5rem;
   font-size: 2rem;
   transition: color 0.3s ease;
