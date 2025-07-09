@@ -1,5 +1,6 @@
 .kontakt-wrapper {
   background: rgba(255, 255, 255, 0.85);
+  border: 2px solid red;
   padding: 2rem;
   border-radius: 15px;
   width:80%;
