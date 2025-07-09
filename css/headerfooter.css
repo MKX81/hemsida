@@ -1,1 +1,165 @@
-test
+/* generella tecken */
+
+:root {
+  --primary-green: #1F382B;
+  --accent-yellow: #E9A43D;
+  --superlight-bg: rgba(255, 255, 255, 0.1); /*Nästan helt transparent vit */
+  --light-bg: rgba(255, 255, 255, 0.5); /* Transparent vit */
+  --highlighted-bg: rgba(255, 255, 255, 0.8); /* Transparent vit */
+}
+
+/* Header */
+
+header {
+  background: var(--superlight-bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(1px);             
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header:hover {
+  background: var(--light-bg);
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo-header {
+  font-family: "Amarante", cursive;
+  font-size: 1.8rem;
+  color: #F5F1EC;
+  transition: color 0.3s ease;
+}
+
+.nav-links-header {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links-header a {
+  position: relative; 
+  text-decoration: none;
+  color: #F5F1EC;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links-header a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;              
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-yellow);  
+  transform: scaleX(0);    
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-links-header a:hover::after {
+  transform: scaleX(1);    
+}
+
+header:hover .logo-header,
+header:hover .nav-links-header a,
+header:hover .menu-toggle-header {
+  color: var(--primary-green);
+}
+
+.menu-toggle-header {
+  display: none;
+  font-size: 1.8rem;
+  color: #F5F1EC;
+  cursor: pointer;
+}
+
+footer {
+  position: relative;
+  z-index: 1000;
+  padding: 0.5rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Social icons i footer */
+.social-icons {
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  position: relative;
+  text-decoration: none;
+  color: #F5F1EC;
+  margin: 0 0.5rem;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+  display: inline-block;
+  line-height: 1;
+}
+
+.social-icons a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;               
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-yellow);  
+  transform: scaleX(0);       
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover::after {
+  transform: scaleX(1);       
+}
+
+/* Mobilmeny */
+@media (max-width: 768px) {
+  .menu-toggle-header {
+    display: block;
+  }
+
+   header:hover .menu-toggle-header {
+    color: var(--primary-green);
+  }
+
+  .nav-links-header {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--light-bg);
+    display: none;
+    padding: 1rem 0;
+    text-align: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+  }
+
+  .nav-links-header.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+
+  .nav-links-header li {
+    margin: 1rem 0;
+  }
+}
