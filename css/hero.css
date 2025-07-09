@@ -217,7 +217,7 @@ main {
 }
 
 .social-icons a {
-  color: var(--accent-yellow);
+  color: #F5F1EC;
   margin: 0 0.5rem;
   font-size: 2rem;
   transition: color 0.3s ease;
@@ -226,7 +226,7 @@ main {
 }
 
 .social-icons a:hover {
-  color: #E9A43D;
+  color: var(--accent-yellow);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
