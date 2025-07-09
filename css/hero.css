@@ -70,12 +70,7 @@ footer {
   font-family: "Amarante", cursive;
   font-size: 1.8rem;
   color: #F5F1EC;
-}
-
-.logo-header:hover {
-  font-family: "Amarante", cursive;
-  font-size: 1.8rem;
-  color: #4d6b57;
+  transition: color 0.3s ease;
 }
 
 .nav-links-header {
@@ -88,11 +83,12 @@ footer {
   text-decoration: none;
   color: #F5F1EC;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
-.nav-links-header a:hover {
-  color: #4d6b57;
+header:hover .logo-header,
+header:hover .nav-links-header a {
+  color: #4d6b57; /* Mörkare färg vid hover på header */
 }
 
 .menu-toggle-header {
