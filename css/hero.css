@@ -205,11 +205,12 @@ main {
 .small-text-block {
   font-size: 0.5rem;
   color: #F5F1EC;
-  margin: 0.5rem 0;
+  margin: 0.5rem auto; /* auto gör att den centreras horisontellt */
   line-height: 1.4;
   font-weight: normal;
   font-family: inherit;
   max-width: 400px;
+  text-align: center;
 }
 
 /* Mobilmeny */
