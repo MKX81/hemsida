@@ -257,7 +257,7 @@ main {
 
 /* Mobilmeny */
 @media (max-width: 768px) {
-  .menu-toggle {
+  .menu-toggle-header {
     display: block;
   }
 
