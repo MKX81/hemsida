@@ -50,15 +50,6 @@ header:hover {
   background: var(--light-bg);
 }
 
-footer {
-  position: relative; /* Behåll för stacking */
-  z-index: 1000;
-  padding: 0.5rem;
-  text-align: center;
-  margin-top: auto;
-}
-
-
 /* Navbar header */
 .navbar-header {
   display: flex;
@@ -106,14 +97,15 @@ footer {
 }
 
 header:hover .logo-header,
-header:hover .nav-links-header a {
+header:hover .nav-links-header a 
+header:hover .menu-toogle-header {
   color: var(--primary-green); /* Mörkare färg vid hover på header */
 }
 
 .menu-toggle-header {
   display: none;
   font-size: 1.8rem;
-  color: #4d6b57;
+  color: #F5F1EC;
   cursor: pointer;
 }
 
@@ -209,6 +201,14 @@ main {
 
 .hero-button:hover {
   background-color: #355143;
+}
+
+footer {
+  position: relative; /* Behåll för stacking */
+  z-index: 1000;
+  padding: 0.5rem;
+  text-align: center;
+  margin-top: auto;
 }
 
 /* Social icons i footer - fix för _ efter ikoner */
