@@ -1,18 +1,34 @@
-/* Grundinställningar för body och bakgrund */
-body {
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  color: #333333;
-  background-image: url('../images/rainforest-2.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+:root {
+  --primary-green: #1F382B;
+  --accent-yellow: #E9A43D;
+  --superlight-bg: rgba(255, 255, 255, 0.1); /*Nästan helt transparent vit */
+  --light-bg: rgba(255, 255, 255, 0.5); /* Transparent vit */
+  --highlighted-bg: rgba(255, 255, 255, 0.8); /* Transparent vit */
+}
 
-  position: relative;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body med bakgrundsbild */
+html, body {
+  height: 100%;
+  font-family: "Kurale", serif;
   color: #2d2d2d;
-  z-index: 1;
-  will-change: transform;
-  overflow-x: hidden;
+  background-image: url("../images/rainforest-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 
