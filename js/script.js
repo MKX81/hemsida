@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
   resetTimer();
 
   // --- Hamburger-meny ---
-  const toggle = document.getElementById("menu-toggle");
-  const nav = document.getElementById("nav-links");
+  const toggle = document.getElementById("menu-toggle-header");
+  const nav = document.getElementById("nav-links-header");
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
       nav.classList.toggle("active");
