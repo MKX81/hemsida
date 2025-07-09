@@ -1,6 +1,7 @@
 :root {
   --primary-green: #2A4B3A;
   --accent-yellow: #E9A43D;
+  --superlight-bg: rgba(255, 255, 255, 0.1); /*Nästan helt transparent vit */
   --light-bg: rgba(255, 255, 255, 0.5); /* Transparent vit */
   --highlighted-bg: rgba(255, 255, 255, 0.8); /* Transparent vit */
 }
@@ -33,7 +34,7 @@ body {
 /* Header och footer med samma transparenta bakgrund */
 
 header {
-  background: var(--light-bg);
+  background: var(--superlight-bg);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: background 0.3s ease, box-shadow 0.3s ease;
   position: fixed;
@@ -56,38 +57,83 @@ footer {
   margin-top: auto; /* För att föttern ska ligga längst ner */
 }
 
-/* Navbar */
-.navbar {
+
+/* Navbar header */
+.navbar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
 }
 
-.logo {
+.logo-header {
+  font-family: "Amarante", cursive;
+  font-size: 1.8rem;
+  color: #F5F1EC;
+}
+
+.logo-header:hover {
   font-family: "Amarante", cursive;
   font-size: 1.8rem;
   color: #4d6b57;
 }
 
-.nav-links {
+.nav-links-header {
   list-style: none;
   display: flex;
   gap: 1.5rem;
 }
 
-.nav-links a {
+.nav-links-header a {
+  text-decoration: none;
+  color: #F5F1EC;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links-header a:hover {
+  color: #4d6b57;
+}
+
+.menu-toggle-header {
+  display: none;
+  font-size: 1.8rem;
+  color: #4d6b57;
+  cursor: pointer;
+}
+
+/* Navbar-footer */
+.navbar-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo-footer {
+  font-family: "Amarante", cursive;
+  font-size: 1.8rem;
+  color: #4d6b57;
+}
+
+.nav-links-footer {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links-footer a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-.nav-links a:hover {
+.nav-links-footer a:hover {
   color: #4d6b57;
 }
 
-.menu-toggle {
+.menu-toggle-footer {
   display: none;
   font-size: 1.8rem;
   color: #4d6b57;
