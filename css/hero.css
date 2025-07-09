@@ -31,21 +31,26 @@ body {
 }
 
 /* Header och footer med samma transparenta bakgrund */
-header,
-footer {
-  background: var(--light-bg);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: relative; /* Behåll för stacking */
-  z-index: 1000;
-}
 
 header {
+  background: var(--light-bg);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1000;
+}
+
+header:hover {
+  background: var(--highlighted-bg);
 }
 
 footer {
+  background: var(--highlighted-bg);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative; /* Behåll för stacking */
+  z-index: 1000;
   padding: 1rem;
   text-align: center;
   margin-top: auto; /* För att föttern ska ligga längst ner */
