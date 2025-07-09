@@ -35,7 +35,7 @@ body {
 
 header {
   background: var(--superlight-bg);
-  backdrop-filter: blur(5px);             
+  backdrop-filter: blur(1px);             
   -webkit-backdrop-filter: blur(5px);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: background 0.3s ease, box-shadow 0.3s ease;
@@ -203,14 +203,13 @@ main {
 }
 
 .small-text-block {
-  font-size: 0.85rem;
-  color: #E3DED8;
+  font-size: 0.5rem;
+  color: #F5F1EC;
   margin: 0.5rem 0;
   line-height: 1.4;
   font-weight: normal;
   font-family: inherit;
   max-width: 400px;
-  opacity: 0.9;
 }
 
 /* Mobilmeny */
