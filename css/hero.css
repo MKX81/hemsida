@@ -261,7 +261,7 @@ main {
     display: block;
   }
 
-  .nav-links {
+  .nav-links-header {
     position: absolute;
     top: 70px;
     left: 0;
@@ -277,14 +277,14 @@ main {
     pointer-events: none;
   }
 
-  .nav-links.active {
+  .nav-links-header.active {
     display: flex;
     opacity: 1;
     transform: translateY(0);
     pointer-events: all;
   }
 
-  .nav-links li {
+  .nav-links-header li {
     margin: 1rem 0;
   }
 }
