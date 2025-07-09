@@ -1,45 +1,56 @@
-/* === Grundfärger === */
 :root {
   --primary-green: #2A4B3A;
   --accent-yellow: #E9A43D;
-  --light-bg: #F5F1EC;
+  --light-bg: rgba(255, 255, 255, 0.85); /* Transparent vit */
 }
 
-/* === Reset === */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* === Bas === */
+/* Body med bakgrundsbild */
 html, body {
   height: 100%;
   font-family: "Kurale", serif;
+  color: #2d2d2d;
   background-image: url("images/rainforest-2.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  color: #2d2d2d;
+  background-repeat: no-repeat;
 }
 
-/* === Layout === */
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* === Header === */
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* Header och footer med samma transparenta bakgrund */
+header,
+footer {
+  background: var(--light-bg);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative; /* Behåll för stacking */
   z-index: 1000;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  margin-top: auto; /* För att föttern ska ligga längst ner */
+}
+
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -77,74 +88,54 @@ header {
   cursor: pointer;
 }
 
-/* === Hero-rutor med bilder === */
+/* Hero-sektion utan bilder i boxarna */
 .hero-section {
-  background-color: var(--light-bg);
-  padding: 80px 20px 40px; /* plats för header */
-}
-
-.hero-container {
+  padding: 80px 20px 40px; /* Plats för fixed header */
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  max-width: 1200px;
-  margin: auto;
 }
 
+/* Boxar utan bilder, med skugga på hover */
 .hero-box {
-  background-color: white;
+  background: var(--light-bg);
   border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
   cursor: pointer;
 }
 
-.hero-box img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.hero-content {
-  padding: 16px;
-  color: var(--primary-green);
-}
-
 .hero-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px var(--accent-yellow);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.3);
 }
 
-.hero-box::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--accent-yellow);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  mix-blend-mode: overlay;
+/* Text i boxarna */
+.hero-content h3 {
+  color: var(--primary-green);
+  margin-bottom: 0.8rem;
 }
 
-.hero-box:hover::before {
-  opacity: 0.15;
+.hero-content p {
+  color: #444;
+  line-height: 1.4;
 }
 
-/* === Hero-textbox === */
+/* Hero-textbox under hero-sektionen */
 main {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 70px;
+  padding-top: 70px; /* Plats för fixed header */
   padding-bottom: 2rem;
   text-align: center;
 }
 
 .hero-text-box {
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--light-bg);
   padding: 2rem;
   border-radius: 12px;
   max-width: 600px;
@@ -178,13 +169,7 @@ main {
   background-color: #355143;
 }
 
-/* === Footer === */
-footer {
-  background-color: #f4f4f4;
-  padding: 1rem;
-  text-align: center;
-}
-
+/* Social icons i footer - fix för _ efter ikoner */
 .social-icons {
   margin-top: 0.5rem;
 }
@@ -194,13 +179,15 @@ footer {
   margin: 0 0.5rem;
   font-size: 1.3rem;
   transition: color 0.3s;
+  display: inline-block; /* Viktigt för att inga extra tecken ska visas */
+  line-height: 1; /* Undvik höjdproblem */
 }
 
 .social-icons a:hover {
   color: #2a3d31;
 }
 
-/* === Mobilmeny === */
+/* Mobilmeny */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -212,7 +199,7 @@ footer {
     left: 0;
     width: 100%;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: var(--light-bg);
     display: none;
     padding: 1rem 0;
     text-align: center;
