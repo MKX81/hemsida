@@ -1,42 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bosque Nórdico</title>
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Kurale&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/headerfooter.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
 
-  <link rel="stylesheet" href="css/style.css" />
-   <link rel="stylesheet" href="css/contacto.css" />
   <link rel="icon" href="images/favicon.png" type="image/png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amarante&family=Kurale&family=Ruge+Boogie&display=swap" rel="stylesheet">
 
- 
-  <script defer src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </head>
-  
 <body>
- <header>
-  <nav class="main-nav" aria-label="Huvudmeny">
-    <a href="index.html" class="logo-link">
-      <img src="assets/homo-logo.png" alt="Bosque Nórdico home" />
-    </a>
-    <ul class="menu-links">
-      <li><a href="#Boende">Boende</a></li>
-      <li><a href="meny.html">Mat och dryck</a></li>
-      <li><a href="#hitta-hit">Hitta hit</a></li>
-    </ul>
-  </nav>
-</header>
-
-  <main>
-    <section id="spacer" class="spacer"></section>  
+  <header>
+    <nav class="navbar-header">
+      <div class="logo-header">Bosque Nórdico</div>
+      <div class="menu-toggle-header" id="menu-toggle-header" aria-label="Menu Toggle Header" tabindex="0">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links-header" id="nav-links-header">
+        <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="#acomodacoes">Acomodações</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+   <main>
+<section id="spacer" class="spacer"></section>  
     <div class="kontakt-wrapper">
     <h1>Fale conosco</h1>
     <form id="kontaktformulär">
@@ -53,13 +46,9 @@
       <p id="feedback" class="feedback"></p>
     </form>
     </div>
-
-<section id="spacer" class="spacer"></section>  
-  
-</main>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Bosque Nórdico</p>
     <div class="social-icons">
       <a href="https://instagram.com/dittkonto" target="_blank" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
@@ -67,10 +56,14 @@
       <a href="https://wa.me/123456789" target="_blank" aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i>
       </a>
-       <a href="https://google.se/maps..." target="_blank" aria-label="Google Maps">
+      <a href="https://google.se/maps" target="_blank" aria-label="Google Maps">
         <i class="fas fa-map-marker-alt"></i>
       </a>
     </div>
+     <div class="small-text-block">
+      <p>&copy; 2025 Bosque Nórdico</p>
+     </div>
+    
   </footer>
 </body>
 </html>
