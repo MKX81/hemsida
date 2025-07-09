@@ -98,7 +98,7 @@ header:hover .nav-links-header a {
   cursor: pointer;
 }
 
-/* hero-sektion utan bilder i boxarna */
+/* hero-sektion */
 .hero-section {
   padding: 80px 20px 40px;
   max-width: 1200px;
@@ -200,6 +200,17 @@ main {
 
 .social-icons a:hover {
   color: #1F382B;
+}
+
+.small-text-block {
+  font-size: 0.85rem;
+  color: #E3DED8;
+  margin: 0.5rem 0;
+  line-height: 1.4;
+  font-weight: normal;
+  font-family: inherit;
+  max-width: 400px;
+  opacity: 0.9;
 }
 
 /* Mobilmeny */
