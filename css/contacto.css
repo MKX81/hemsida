@@ -1,9 +1,9 @@
 .kontakt-wrapper {
   background: rgba(255, 255, 255, 0.85);
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 15px;
   width:80%;
-  margin: 1.5rem auto;
+  margin: 1rem auto;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
@@ -23,7 +23,7 @@ label {
 }
 
 input, textarea {
-  padding: 0.5rem;
+  padding: 0.2rem;
   border-radius: 8px;
   border: 1px solid #aaa;
   font-family: inherit;
@@ -32,10 +32,10 @@ input, textarea {
 }
 
 button {
-  padding: 0.7rem;
+  padding: 0.5rem;
   font-size: 1.1rem;
   font-family: inherit;
-  background-color: #4D6B57;
+  background-color: #4F7C63;
   color: white;
   border: none;
   border-radius: 10px;
@@ -44,7 +44,7 @@ button {
 }
 
 button:hover {
-  background-color: #355042;
+  background-color: #2A4B3A;
 }
 
 .feedback {
