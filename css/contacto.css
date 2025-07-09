@@ -48,7 +48,7 @@ button:hover {
 }
 
 .feedback {
-  margin-top: 1rem;
+  margin: 0.5rem;
   font-size: 1.4rem;
   text-align: center;
   font-weight: bold;
