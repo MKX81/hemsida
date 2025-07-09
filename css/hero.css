@@ -97,8 +97,8 @@ header:hover {
 }
 
 header:hover .logo-header,
-header:hover .nav-links-header a 
-header:hover .menu-toogle-header {
+header:hover .nav-links-header a,
+header:hover .menu-toggle-header {
   color: var(--primary-green); /* Mörkare färg vid hover på header */
 }
 
