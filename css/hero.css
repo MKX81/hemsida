@@ -31,7 +31,7 @@ body {
   min-height: 100vh;
 }
 
-/* Header och footer med samma transparenta bakgrund */
+/* Header */
 
 header {
   background: var(--superlight-bg);
@@ -259,6 +259,10 @@ footer {
 @media (max-width: 768px) {
   .menu-toggle-header {
     display: block;
+  }
+
+   header:hover .menu-toggle-header {
+    color: var(--primary-green);
   }
 
   .nav-links-header {
