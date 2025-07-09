@@ -49,8 +49,9 @@ button:hover {
 
 .feedback {
   margin-top: 1rem;
+  font-size: 1.4rem;
   text-align: center;
   font-weight: bold;
-  color: green;
+  color: #A24C3D;
 }
 
