@@ -54,6 +54,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  document.addEventListener('click', (event) => {
+      const isClickInsideMenu = nav.contains(event.target);
+      const isClickOnToggle = toggle.contains(event.target);
+
+      if (!isClickInsideMenu && !isClickOnToggle) {
+        nav.classList.remove('active');
+      }
+    });
+  }
+
   // --- Info-banner stängning ---
   const infoBanner = document.querySelector(".info-banner");
   if (infoBanner) {
