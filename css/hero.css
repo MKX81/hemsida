@@ -48,13 +48,11 @@ header:hover {
 }
 
 footer {
-  background: var(--superlight-bg);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: relative; /* Behåll för stacking */
   z-index: 1000;
-  padding: 1rem;
+  padding: 0.5rem;
   text-align: center;
-  margin-top: auto; /* För att föttern ska ligga längst ner */
+  margin-top: auto;
 }
 
 
@@ -92,44 +90,6 @@ header:hover .nav-links-header a {
 }
 
 .menu-toggle-header {
-  display: none;
-  font-size: 1.8rem;
-  color: #4d6b57;
-  cursor: pointer;
-}
-
-/* Navbar-footer */
-.navbar-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-}
-
-.logo-footer {
-  font-family: "Amarante", cursive;
-  font-size: 1.8rem;
-  color: #4d6b57;
-}
-
-.nav-links-footer {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links-footer a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.nav-links-footer a:hover {
-  color: #4d6b57;
-}
-
-.menu-toggle-footer {
   display: none;
   font-size: 1.8rem;
   color: #4d6b57;
