@@ -97,6 +97,10 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
+  height: 100vh;
+  justify-content: center;
+  align-content: center;
+  box-sizing: border-box;
 }
 
 .hero-box {
