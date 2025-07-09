@@ -114,17 +114,25 @@ header:hover .nav-links-header a {
 }
 
 .hero-box {
-  background: var(--light-bg);
+  background: rgba(255, 255, 255, 0.15); /* halvtransparent vit */
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);          /* suddar bakgrunden bakom boxen */
+  -webkit-backdrop-filter: blur(10px);  /* Safari-stöd */
+  border: 1px solid rgba(255, 255, 255, 0.3);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
 }
 
-.hero-box:hover {
-  box-shadow: 0 12px 20px rgba(0,0,0,0.3);
-  background: var(--highlighted-bg)
+.hero-box-hover {
+  background: rgba(255, 255, 255, 0.25); /* lite ljusare vid hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transform: scale(1.02);
+  transition: all 0.3s ease;
 }
 
 /* Text i boxarna */
