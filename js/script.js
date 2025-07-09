@@ -91,30 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Kontaktformulär validering ---
-  const form = document.getElementById("kontaktformulär");
-  const feedback = document.getElementById("feedback");
-
-  if (form && feedback) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const namn = document.getElementById("namn").value.trim();
-      const epost = document.getElementById("epost").value.trim();
-      const meddelande = document.getElementById("meddelande").value.trim();
-
-      if (!namn || !epost || !meddelande) {
-        feedback.textContent = "Fyll i alla fält.";
-        feedback.style.color = "red";
-        return;
-      }
-
-      feedback.textContent = "Tack för ditt meddelande!";
-      feedback.style.color = "green";
-      form.reset();
-    });
-  }
-
   // --- Parallax scroll på bakgrund ---
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
