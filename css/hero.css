@@ -228,16 +228,16 @@ main {
 }
 
 .social-icons a {
-  color: #4d6b57;
+  color: #F5F1EC;
   margin: 0 0.5rem;
-  font-size: 1.3rem;
+  font-size: 2rem;
   transition: color 0.3s;
-  display: inline-block; /* Viktigt för att inga extra tecken ska visas */
+  display: inline-block;
   line-height: 1; /* Undvik höjdproblem */
 }
 
 .social-icons a:hover {
-  color: #2a3d31;
+  color: #1F382B;
 }
 
 /* Mobilmeny */
