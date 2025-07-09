@@ -1,5 +1,5 @@
 :root {
-  --primary-green: #2A4B3A;
+  --primary-green: #1F382B;
   --accent-yellow: #E9A43D;
   --superlight-bg: rgba(255, 255, 255, 0.1); /*Nästan helt transparent vit */
   --light-bg: rgba(255, 255, 255, 0.5); /* Transparent vit */
@@ -114,12 +114,12 @@ header:hover .nav-links-header a {
 }
 
 .hero-box {
-  background: rgba(255, 255, 255, 0.15); /* halvtransparent vit */
+  background: rgba(255, 255, 255, 0.10); /* halvtransparent vit */
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);          /* suddar bakgrunden bakom boxen */
-  -webkit-backdrop-filter: blur(10px);  /* Safari-stöd */
+  backdrop-filter: blur(4px);          
+  -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
@@ -128,10 +128,10 @@ header:hover .nav-links-header a {
 .hero-box:hover {
   background: rgba(255, 255, 255, 0.25); /* lite ljusare vid hover */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   border: 1px solid rgba(255, 255, 255, 0.4);
-  transform: scale(1.02);
+  transform: scale(1.05);
   transition: all 0.3s ease;
 }
 
