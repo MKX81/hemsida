@@ -1,7 +1,8 @@
 :root {
   --primary-green: #2A4B3A;
   --accent-yellow: #E9A43D;
-  --light-bg: rgba(255, 255, 255, 0.85); /* Transparent vit */
+  --light-bg: rgba(255, 255, 255, 0.5); /* Transparent vit */
+  --highlighted-bg: rgba(255, 255, 255, 0.8); /* Transparent vit */
 }
 
 /* Reset */
@@ -114,6 +115,7 @@ footer {
 
 .hero-box:hover {
   box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+  background: var(--highlighted-bg)
 }
 
 /* Text i boxarna */
