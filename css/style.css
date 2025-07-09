@@ -16,113 +16,20 @@ body {
 }
 
 
-/* --- HEADER MENY --- */
-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0.2rem 1rem;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1100;
-
-  background: rgba(255, 255, 255, 0.4);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(5px);
-}
-
-.main-nav {
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 100%;
-}
-
-/* Logon till vänster, fix höjd */
-.logo-link {
-  height: 2rem;
-  flex-shrink: 0; /* så att den inte krymper */
-}
-
-.logo-link img {
-  height: 100%;
-  width: auto;
-  display: block;
-}
-
-/* Menyn centreras med absolut position och transform */
-.menu-links {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-family: 'Kurale', serif;
-}
-
-.menu-links a {
-  color: #333333;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 1.2rem;
-  transition: color 0.3s ease, font-size 0.3s ease, text-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.menu-links a:hover {
-  font-weight: 700;
-}
-
-/* Dropdown wrapper */
-.dropdown {
-  position: relative;
-}
-
-/* Dropdown listan */
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(3px);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem 0;
-  list-style: none;
-  min-width: 10rem;
-  z-index: 10000;
-}
-
-/* Dropdown-länkar */
-.dropdown-menu li a {
-  display: block;
-  padding: 0.5rem 1rem;
-  color: #333;
-  text-decoration: none;
-  font-size: 1rem;
-  white-space: nowrap;
-}
-
-.dropdown-menu li a:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-  font-weight: 600;
-}
-
-/* Visa dropdown vid hover */
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
+/* --- HEADER --- */
+ <header>
+    <nav class="navbar-header">
+      <div class="logo-header">Bosque Nórdico</div>
+      <div class="menu-toggle-header" id="menu-toggle-header" aria-label="Menu Toggle Header" tabindex="0">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links-header" id="nav-links-header">
+        <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="#acomodacoes">Acomodações</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
 main {
   padding: 0;
