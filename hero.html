@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Kurale&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/hero.css" />
+
+  <script src="js/script.js"></script>
+</body>
 </head>
 <body>
   <header>
@@ -66,14 +69,5 @@
      </div>
     
   </footer>
-
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const nav = document.getElementById('nav-links');
-    toggle.addEventListener('click', () => nav.classList.toggle('active'));
-    document.querySelectorAll('#nav-links a').forEach(link => {
-      link.addEventListener('click', () => nav.classList.remove('active'));
-    });
-  </script>
 </body>
 </html>
