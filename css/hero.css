@@ -125,7 +125,7 @@ header:hover .nav-links-header a {
   cursor: pointer;
 }
 
-.hero-box-hover {
+.hero-box:hover {
   background: rgba(255, 255, 255, 0.25); /* lite ljusare vid hover */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(12px);
