@@ -88,17 +88,17 @@ footer {
   cursor: pointer;
 }
 
-/* Hero-sektion utan bilder i boxarna */
+/* hero-sektion utan bilder i boxarna */
 .hero-section {
-  padding: 80px 20px 40px; /* Plats för fixed header */
+  padding: 80px 20px 40px;
   max-width: 1200px;
   margin: 0 auto;
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 
-/* Boxar utan bilder, med skugga på hover */
 .hero-box {
   background: var(--light-bg);
   border-radius: 12px;
