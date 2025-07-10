@@ -61,3 +61,10 @@
 .menu-item-description i {
   margin-left: 0.3rem;
 }
+
+.menu-details {
+  text-align: center; 
+  font-size: 0.8rem;
+  color: #333333;
+  margin-top: 1rem; 
+}
