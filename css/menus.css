@@ -1,11 +1,21 @@
 .menu-section {
-  max-width: 800px;
-  margin: 1.5rem auto;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(4px);
-  border-radius: 10px 10px 2px 2px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background-image: url('assets/exclusive-paper.png');
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: center;
+  
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 80%;
+  max-width: 700px;
+
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+  color: #3e3a31;
+  
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  border-radius: 8px;
+  line-height: 1.6;
 }
 
 .menu-section h2 {
