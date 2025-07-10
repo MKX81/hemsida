@@ -26,6 +26,16 @@
   font-family: 'Amarante', cursive;
 }
 
+.menu-section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #7a6448;
+  margin: 0.5rem auto 0;
+}
+
+
 .menu-item {
   display: flex;
   justify-content: space-between;
