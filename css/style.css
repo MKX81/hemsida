@@ -133,8 +133,8 @@ main {
   top: 30%;
   right: 0;
   transform: translateY(-50%);
-  background-color: #F5F1EC;
-  color: var(--accent-yellow);
+  background-color: #333333;
+  color: #F5F1EC;
   padding: 0.8rem 1rem;
   border-radius: 8px 0 0 8px;
   box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
