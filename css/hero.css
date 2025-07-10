@@ -1,6 +1,7 @@
 /* Hero-titel */
 
 .hero-title {
+  margin-top: 4rem; 
   font-size: 4rem;
   font-weight: 800;
   text-align: center;
