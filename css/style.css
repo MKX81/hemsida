@@ -132,7 +132,7 @@ main {
   position: fixed;
   top: 30%;
   right: 0;
-  transform: translateY(-50%) translateX(-10px);
+  transform: translateY(-50%);
   background-color: #333333;
   color: #F5F1EC;
   padding: 0.8rem 1rem;
@@ -146,7 +146,7 @@ main {
 }
 
 .sidebar-tab:hover {
-  transform: translateY(-50%) translateX(0px);
+ padding-right: 10px;
   color: var(--accent-yellow);
 }
 
