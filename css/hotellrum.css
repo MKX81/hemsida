@@ -1,3 +1,10 @@
+.hotel-room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;  
+  padding: 1rem;
+}
+
 .hotel-room-box {
   width: 100%;
   max-width: 500px;
