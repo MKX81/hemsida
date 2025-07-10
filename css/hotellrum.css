@@ -21,7 +21,7 @@
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 16px;
-  filter: grayscale(100%);
+  filter: sepia(100%);
   transition: filter 0.4s ease, transform 0.4s ease;
 }
 
@@ -80,5 +80,5 @@
 
 /* Bilden blir färg och zoomar lite vid hover */
 .hotel-room-box:hover img {
-  filter: grayscale(0%);
+  filter: sepia(0%);
 }
