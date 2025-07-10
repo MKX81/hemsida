@@ -47,6 +47,6 @@
   margin-top: 0.2rem;
 }
 
-.menu-item-ingredients {
-  color: var(--accent-yellow);
+.menu-item-description i {
+  margin-left: 0.3rem;
 }
