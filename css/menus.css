@@ -47,3 +47,6 @@
   margin-top: 0.2rem;
 }
 
+.menu-item-ingredients {
+  color: var(--accent-yellow);
+}
