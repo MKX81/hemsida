@@ -4,9 +4,9 @@
   align-content: center; 
   margin: 4rem auto 0 auto;
   font-size: 5rem;
-  font-weight: 800;
+  font-weight: 900;
   text-align: center;
-  color: #E3DED8;
+  color: #A24C3D;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
   padding: 2rem 1rem;
   max-width: 90%;
@@ -30,10 +30,10 @@
 /* hero-sektion */
 .hero-section {
   margin: 2rem auto 0 auto;
-  max-width: 80%;
+  max-width: 90%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
+  gap: 2rem;
   align-content: center;
   box-sizing: border-box;
 }
