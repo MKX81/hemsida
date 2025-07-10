@@ -146,7 +146,7 @@ main {
 }
 
 .sidebar-tab:hover {
- padding-left: 15px;
+ padding-left: 30px;
   color: var(--accent-yellow);
 }
 
