@@ -134,6 +134,7 @@ main {
   right: 0;
   transform: translateY(-50%);
   background-color: #333333;
+  text-align: left;
   color: #F5F1EC;
   padding: 0.8rem 1rem;
   border-radius: 8px 0 0 8px;
@@ -146,7 +147,7 @@ main {
 }
 
 .sidebar-tab:hover {
- padding-left: 30px;
+ padding-right 30px;
   color: var(--accent-yellow);
 }
 
