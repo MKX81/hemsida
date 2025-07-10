@@ -19,6 +19,14 @@
   line-height: 1.6;
 }
 
+.menu-section h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-family: 'Amarante', cursive;
+  color: #1F382B;
+}
+
 .menu-section h2 {
   text-align: center;
   font-size: 1.8rem;
