@@ -130,24 +130,23 @@ main {
 }
 .sidebar-tab {
   position: fixed;
-  top: 50%;
+  top: 30%;
   right: 0;
   transform: translateY(-50%);
-  background-color: #4F7C63; /* valfri färg */
-  color: white;
+  background-color: #F5F1EC;
+  color: var(--accent-yellow);
   padding: 0.8rem 1rem;
   border-radius: 8px 0 0 8px;
   box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.2);
   font-family: inherit;
   font-size: 1rem;
   cursor: pointer;
-  transition: right 0.3s ease;
+  transition: all 0.3s ease;
   z-index: 2000;
 }
 
 .sidebar-tab:hover {
-  right: 5px;
-  background-color: #2A4B3A;
+  color: var(--accent-yellow);
 }
 
 
