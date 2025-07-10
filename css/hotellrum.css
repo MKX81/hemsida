@@ -1,14 +1,16 @@
 .hotel-room-box {
   width: 100%;
   max-width: 500px;
-  margin: 1.5rem auto; /* Ger luft mellan boxar */
+  margin: 1.5rem auto; /* Luft mellan boxar */
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
   font-family: Arial, sans-serif;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.95); /* Nästan vitt med lätt transparens */
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
 
 .hotel-room-box img {
@@ -16,6 +18,8 @@
   max-width: 300px;
   border-radius: 6px;
   margin-bottom: 16px;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease, transform 0.4s ease;
 }
 
 .hotel-room-box h2 {
@@ -45,3 +49,15 @@
   background-color: #0056b3;
 }
 
+/* Hover-effekter på hela boxen */
+.hotel-room-box:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  background-color: rgba(255, 255, 255, 1);
+  transform: translateY(-5px);
+}
+
+/* Bilden blir färg och zoomar lite vid hover */
+.hotel-room-box:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
