@@ -22,7 +22,7 @@
 .menu-section h1 {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-family: 'Amarante', cursive;
   color: #1F382B;
 }
@@ -30,7 +30,7 @@
 .menu-section h2 {
   text-align: center;
   font-size: 1.8rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
   font-family: 'Amarante', cursive;
 }
 
@@ -88,7 +88,8 @@
 
 .menu-icons-note i {
   margin: 0 0.4rem;
-  font-size: 1.2rem;
+  font-size: 0.95rem;
+  color: #2A4B3A;
 }
 
 .menu-icons-note p {
