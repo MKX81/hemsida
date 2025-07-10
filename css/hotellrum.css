@@ -1,23 +1,23 @@
 .hotel-room-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;  
+  gap: 1.8rem;  
   padding: 1rem;
 }
 
 .hotel-room-box {
-  margin: 1.5rem auto;
+  margin: 1rem auto;
   border-radius: 8px;
   padding: 0.5rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   text-align: center;
   background-color: rgba(255, 255, 255, 0.95);
   transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
 }
 
 .hotel-room-box img {
   width: 100%;
+  height: 200px;
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 16px;
@@ -40,18 +40,18 @@
 
 .amenities-row {
   display: flex;             
-  gap: 1rem;                 
+  gap: 1.1rem;                 
   justify-content: center;   
   flex-wrap: wrap;           
-  margin-bottom: 1rem;       
+  margin-bottom: 0.5rem;       
 }
 
 .amenities-row p {
   margin: 0;                 
   display: flex;             
   align-items: center;     
-  gap: 0.4rem;              
-  font-size: 0.9rem;
+  gap: 0.2rem;              
+  font-size: 1rem;
   color: #333333;
 }
 
@@ -69,6 +69,7 @@
 
 .book-link:hover {
   background-color: #1F382B;
+  cursor: pointer;
 }
 
 /* Hover-effekter på hela boxen */
