@@ -1,51 +1,34 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bosque Nórdico - comida e bebidas</title>
+  <title>Bosque Nórdico</title>
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Kurale&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/headerfooter.css" />
   <link rel="stylesheet" href="css/menus.css" />
-  <link rel="icon" href="images/favicon.png" type="image/png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amarante&family=Kurale&family=Ruge+Boogie&display=swap" rel="stylesheet">
 
- 
-  <script defer src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </head>
-  <body>
- <header>
-  <nav class="main-nav" aria-label="menu comida e bebidas">
-    <a href="index.html" class="logo-link">
-      <img src="images/logo-draft.png" alt="Bosque Nórdico logo" />
-    </a>
-   <ul class="menu-links">
-  <li class="dropdown">
-    <a href="#Boende">Comida</a>
-    <ul class="dropdown-menu">
-      <li><a href="#cafe-da-manha">Café da manhã</a></li>
-      <li><a href="#Almo&ccedilo">Almo&ccedilo</a></li>
-      <li><a href="#Jantar">Jantar</a></li>
-    </ul>
-  <li><a href="meny.html">Doces</a></li>
-  <li><a href="#hitta-hit">Bebidas</a></li>
-</ul>
-  </nav>
-</header>
-
+<body>
+  <header>
+    <nav class="navbar-header">
+      <div class="logo-header">Bosque Nórdico</div>
+      <div class="menu-toggle-header" id="menu-toggle-header" aria-label="Menu Toggle Header" tabindex="0">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links-header" id="nav-links-header">
+        <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="#acomodacoes">Acomodações</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 <main>
-
-  <section id="spacer" class="spacer"></section>
-
-
-   <section class="menu-section">
+  <section class="menu-section">
     <h2>Café da manhã</h2>
 
     <div class="menu-item">
@@ -120,8 +103,8 @@
 </div>
   </section>
 </main>
- <footer>
-    <p>&copy; 2025 Bosque Nórdico</p>
+
+  <footer>
     <div class="social-icons">
       <a href="https://instagram.com/dittkonto" target="_blank" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
@@ -129,11 +112,14 @@
       <a href="https://wa.me/123456789" target="_blank" aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i>
       </a>
-       <a href="https://google.se/maps..." target="_blank" aria-label="Google Maps">
+      <a href="https://google.se/maps" target="_blank" aria-label="Google Maps">
         <i class="fas fa-map-marker-alt"></i>
       </a>
     </div>
+     <div class="small-text-block">
+      <p>&copy; 2025 Bosque Nórdico</p>
+     </div>
+    
   </footer>
-
 </body>
 </html>
