@@ -1,3 +1,26 @@
+/* Gemensamma stilar */
+
+.kontakt-info h1,
+.kontakt-wrapper h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1F382B;
+}
+
+
+.kontakt-info p,
+.kontakt-wrapper p {
+  margin: 0.3rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.kontakt-info i,
+.kontakt-wrapper i {
+  color: #1F382B;
+}
+
 .kontakt-info {
   background: rgba(255, 255, 255, 0.85);
   padding: 1rem;
@@ -10,25 +33,6 @@
   color: #333;
 }
 
-.kontakt-info h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 1.6rem;
-  color: #1F382B;
-}
-
-.kontakt-info p {
-  margin: 0.3rem 0;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.kontakt-info i {
-  color: #1F382B;
-}
-
-
 
 .kontakt-wrapper {
   background: rgba(255, 255, 255, 0.85);
@@ -37,12 +41,6 @@
   width:80%;
   margin: 1rem auto;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #1F382B;
 }
 
 form {
