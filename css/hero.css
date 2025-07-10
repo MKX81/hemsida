@@ -1,6 +1,7 @@
 /* Hero-titel */
 
 .hero-title {
+  align-content: center; 
   margin-top: 4rem; 
   font-size: 4rem;
   font-weight: 800;
@@ -28,15 +29,12 @@
 
 /* hero-sektion */
 .hero-section {
-  padding: 80px 20px 40px;
+  margin-top: 4rem;
   max-width: 80%;
-  margin: 0 auto;
-
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   height: 100vh;
-  justify-content: center;
   align-content: center;
   box-sizing: border-box;
 }
