@@ -1,28 +1,33 @@
 .hotel-room-box {
   width: 100%;
+  max-width: 500px;
+  margin: 1.5rem auto; /* Ger luft mellan boxar */
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
   font-family: Arial, sans-serif;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.95); /* Nästan vitt med lätt transparens */
 }
 
 .hotel-room-box img {
-  width: 50%;
+  width: 100%;
+  max-width: 300px;
   border-radius: 6px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .hotel-room-box h2 {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   color: #333;
+  font-size: 1.4rem;
 }
 
 .hotel-room-box p {
-  font-size: 14px;
+  font-size: 15px;
   color: #555;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .book-link {
@@ -39,3 +44,4 @@
 .book-link:hover {
   background-color: #0056b3;
 }
+
