@@ -6,13 +6,9 @@
 }
 
 .hotel-room-box {
-  width: 100%;
-  max-width: 500px;
-  margin: 1.5rem auto; /* Luft mellan boxar */
-  border: 1px solid #ccc;
+  margin: 1.5rem auto;
   border-radius: 8px;
-  padding: 16px;
-  font-family: Arial, sans-serif;
+  padding: 0.5rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   text-align: center;
   background-color: rgba(255, 255, 255, 0.95);
@@ -22,9 +18,7 @@
 
 .hotel-room-box img {
   width: 100%;
-  max-width: 300px;
   object-fit: cover;
-  height: 200px; 
   border-radius: 6px;
   margin-bottom: 16px;
   filter: grayscale(100%);
