@@ -91,11 +91,12 @@ header:hover {
   transform: scaleX(1);    
 }
 
-header:hover .logo-header a,
-header:hover .nav-links-header a,
-header:hover .menu-toggle-header {
+.logo-header a:hover,
+.nav-links-header a:hover,
+.menu-toggle-header:hover {
   color: var(--primary-green);
 }
+
 
 .menu-toggle-header {
   display: none;
