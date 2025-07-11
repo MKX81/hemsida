@@ -41,7 +41,7 @@ header:hover {
   transition: color 0.3s ease;
 }
 
-.nav-links-header a {
+.logo-header a {
   position: relative; 
   text-decoration: none;
   color: #F5F1EC;
@@ -49,7 +49,7 @@ header:hover {
   transition: color 0.3s ease;
 }
 
-.nav-links-header a::after {
+.logo-header a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -62,7 +62,7 @@ header:hover {
   transition: transform 0.3s ease;
 }
 
-.nav-links-header a:hover::after {
+.logo-header a:hover::after {
   transform: scaleX(1);    
 }
 
