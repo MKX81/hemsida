@@ -17,27 +17,31 @@ header:hover {
   background: var(--light-bg);
 }
 
+/* Ändra navbar-header så att den staplar menyikonerna */
 .navbar-header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
+  gap: 1rem;
+  text-align: center;
 }
 
 .logo-header {
-  font-family: "Amarante", cursive;
-  font-size: 1.8rem;
-  color: #F5F1EC;
-  transition: color 0.3s ease;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .logo-header a {
-  position: relative; 
-  text-decoration: none;
+  font-family: "Amarante", cursive;
+  font-size: 2.2rem;
   color: #F5F1EC;
+  text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
+
 
 .logo-header a::after {
   content: "";
