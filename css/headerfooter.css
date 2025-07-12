@@ -2,9 +2,9 @@
 
 header {
   background: transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(1px);             
-  -webkit-backdrop-filter: blur(1px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(2px);             
+  -webkit-backdrop-filter: blur(2px);
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   transition: background 0.3s ease, box-shadow 0.3s ease;
   position: fixed;
@@ -42,7 +42,7 @@ header:hover a {
 .logo-header a {
   position: relative;
   font-family: "Amarante", cursive;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #F5F1EC;
   text-decoration: none;
   font-weight: bold;
@@ -78,7 +78,7 @@ header:hover a {
   position: relative; 
   text-decoration: none;
   color: #F5F1EC;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -102,7 +102,7 @@ header:hover a {
 
 .menu-toggle-header {
   display: none;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #F5F1EC;
   cursor: pointer;
 }
