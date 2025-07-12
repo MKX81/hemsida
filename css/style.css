@@ -5,6 +5,10 @@
   --light-bg: rgba(255, 255, 255, 0.5); /* Transparent vit */
   --highlighted-bg: rgba(255, 255, 255, 0.8); /* Transparent vit */
 }
+.underline {
+  text-decoration: underline; 
+  text-decoration-color: var(--accent-yellow);
+  }
 
 /* Reset */
 * {
