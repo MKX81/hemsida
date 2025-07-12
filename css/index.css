@@ -26,8 +26,9 @@
 }
 
 .hero-3 {
-  position: sticky; 
+  position: fixed; 
   top:0;
+  left:0;
   height: 100vh;
   background-image: url("../images/gastronomy-1.jpg");
   z-index: 2;
