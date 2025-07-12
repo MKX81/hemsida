@@ -38,7 +38,8 @@
 
 .hero-title {
   align-content: center; 
-  margin: 200px auto 0 auto;
+  margin-top: 10rem;
+  margin-bottom: auto;
   font-size: 5rem;
   font-weight: 900;
   text-align: center;
@@ -49,7 +50,6 @@
 }
 
 .hero-sub-title {
-  align-content: center; 
   margin: auto;
   font-size: 3rem;
   font-weight: 500;
