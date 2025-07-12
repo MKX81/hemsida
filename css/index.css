@@ -14,37 +14,24 @@
 .hero-1 {
   height: 100vh;
   background-image: url("../images/rainforest-1.jpg");
+  z-index: 1;
 }
 
 .hero-2 {
   height: 75vh;
   background-color: #333333;
   opacity: 0;
-  animation: fadeInUp 1s ease-out forwards;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  z-index: 2;
 }
 
 .hero-3 {
   height: 100vh;
   background-image: url("../images/gastronomy-1.jpg");
   opacity: 0;
-  animation: fadeInUp 1s ease-out forwards;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  z-index: 3;
+  margin-top: -75vh 
 }
 
-/* ANIMATIONER*/
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 
 /* Hero-titel (section hero-1) */
