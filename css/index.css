@@ -93,5 +93,7 @@
 .book-now-button:hover {
   color: var(--accent-yellow);
   border-color: var(--accent-yellow);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
