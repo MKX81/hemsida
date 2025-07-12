@@ -109,7 +109,7 @@ header:hover a {
 
 footer {
   background-color: transparent;
-  position: relative;
+  position: fixed;
   z-index: 1000;
   padding: 0.5rem;
   text-align: center;
