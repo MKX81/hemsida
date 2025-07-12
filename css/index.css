@@ -19,27 +19,24 @@
 }
 
 .hero-2 {
-  height: 75vh;
+  height: 100vh;
   background-color: #333333;
   z-index: 1;
-  position: relative;
+  position: sticky;
+  top: 0;
 }
 
 .hero-3 {
-  position: sticky;
-  top: 0;
+  position: relative;
   height: 100vh;
   background-image: url("../images/gastronomy-1.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   z-index: 2;
 }
 
 .hero-4 {
-  height: 75vh;
+  height: 100vh;
   background-color: #333333;
-  z-index: 2;
+  z-index: 3;
   position: relative;
 }
 
