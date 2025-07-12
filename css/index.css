@@ -24,17 +24,28 @@
   max-width: 90%;
 }
 
-/* Responsiv anpassning för mindre skärmar */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
-  }
+.book-now-button {
+  display: block;
+  background-color: transparent;
+  color: #F5F1EC;
+  border: 2px solid #F5F1EC;
+  padding: 1rem 2rem;
+  margin: 2rem auto;
+  width: fit-content;
+  max-width: 700px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
 }
 
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 2rem;
-  }
+.book-now-button:hover {
+  background-color: var(--accent-yellow); /* eller en gul hex: #FFD700 */
+  color: #333;
+  border-color: var(--accent-yellow);
 }
 
 
