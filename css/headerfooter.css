@@ -79,7 +79,7 @@ header:hover a {
   text-decoration: none;
   color: #F5F1EC;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 400;
   transition: color 0.3s ease;
 }
 
