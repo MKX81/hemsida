@@ -42,7 +42,7 @@ header:hover a {
 .logo-header a {
   position: relative;
   font-family: "Amarante", cursive;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   color: #F5F1EC;
   text-decoration: none;
   font-weight: bold;
@@ -78,6 +78,7 @@ header:hover a {
   position: relative; 
   text-decoration: none;
   color: #F5F1EC;
+  font-size: 2rem;
   font-weight: bold;
   transition: color 0.3s ease;
 }
