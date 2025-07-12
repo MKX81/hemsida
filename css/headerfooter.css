@@ -1,4 +1,4 @@
-/* Header */
+/* HEADER OCH FOOTER */
 
 header {
   background: var(--superlight-bg);
@@ -17,7 +17,7 @@ header:hover {
   background: var(--light-bg);
 }
 
-/* Ändra navbar-header så att den staplar menyikonerna */
+/* headerpunkter i kolumn */
 .navbar-header {
   display: flex;
   flex-direction: column;
@@ -34,6 +34,7 @@ header:hover {
 }
 
 .logo-header a {
+  position: relative;
   font-family: "Amarante", cursive;
   font-size: 2.2rem;
   color: #F5F1EC;
