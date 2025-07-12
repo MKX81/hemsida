@@ -17,7 +17,15 @@
 }
 
 .hero-2 {
-  background-image: url("../images/rainforest-2.jpg");
+  background-color: #333333;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.hero-2 {
+  background-image: url("../images/gastronomia-1.jpg");
   opacity: 0;
   animation: fadeInUp 1s ease-out forwards;
   animation-timeline: view();
