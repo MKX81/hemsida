@@ -1,7 +1,6 @@
 /* Hero-sektioner */
 
 .hero {
-  height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,10 +12,12 @@
 }
 
 .hero-1 {
+  height: 100vh;
   background-image: url("../images/rainforest-1.jpg");
 }
 
 .hero-2 {
+  height: 25vh;
   background-color: #333333;
   opacity: 0;
   animation: fadeInUp 1s ease-out forwards;
@@ -25,6 +26,7 @@
 }
 
 .hero-3 {
+  height: 100vh;
   background-image: url("../images/gastronomy-1.jpg");
   opacity: 0;
   animation: fadeInUp 1s ease-out forwards;
