@@ -25,7 +25,7 @@
 }
 
 .hero-3 {
-  background-image: url("../images/gastronomia-1.jpg");
+  background-image: url("../images/gastronomy-1.jpg");
   opacity: 0;
   animation: fadeInUp 1s ease-out forwards;
   animation-timeline: view();
