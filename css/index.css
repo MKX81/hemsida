@@ -24,7 +24,7 @@
   animation-range: entry 0% cover 40%;
 }
 
-.hero-2 {
+.hero-3 {
   background-image: url("../images/gastronomia-1.jpg");
   opacity: 0;
   animation: fadeInUp 1s ease-out forwards;
