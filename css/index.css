@@ -17,7 +17,7 @@
 }
 
 .hero-2 {
-  height: 50vh;
+  height: 75vh;
   background-color: #333333;
   opacity: 0;
   animation: fadeInUp 1s ease-out forwards;
