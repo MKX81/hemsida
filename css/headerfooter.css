@@ -97,13 +97,6 @@ header:hover a {
   transform: scaleX(1);    
 }
 
-.logo-header a:hover,
-.nav-links-header a:hover,
-.menu-toggle-header:hover {
-  color: var(--accent-yellow);
-}
-
-
 .menu-toggle-header {
   display: none;
   font-size: 1.8rem;
