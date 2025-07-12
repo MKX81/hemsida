@@ -1,4 +1,15 @@
-/* Hero-titel */
+/* Hero-sektioner */
+
+.hero-1 {
+  background-image: url("../images/rainforest-1.jpg");
+}
+
+.hero-2 {
+  background-image: url("../images/rainforest-2.jpg");
+}
+
+
+/* Hero-titel (section hero-1) */
 
 .hero-title {
   align-content: center; 
