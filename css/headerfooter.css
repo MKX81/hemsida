@@ -29,7 +29,7 @@ header:hover a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   gap: 1rem;
   text-align: center;
 }
@@ -37,13 +37,13 @@ header:hover a {
 .logo-header {
   color: #F5F1EC;
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 0.7rem;
 }
 
 .logo-header a {
   position: relative;
   font-family: "Amarante", cursive;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #F5F1EC;
   text-decoration: none;
   font-weight: bold;
@@ -79,7 +79,7 @@ header:hover a {
   position: relative; 
   text-decoration: none;
   color: #F5F1EC;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
   transition: color 0.3s ease;
 }
@@ -103,7 +103,7 @@ header:hover a {
 
 .menu-toggle-header {
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #F5F1EC;
   cursor: pointer;
 }
