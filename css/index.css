@@ -36,6 +36,12 @@
   z-index: 2;
 }
 
+.hero-4 {
+  height: 75vh;
+  background-color: #333333;
+  z-index: 2;
+  position: relative;
+}
 
 /* Hero-titel (section hero-1) */
 
