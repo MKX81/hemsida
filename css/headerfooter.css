@@ -2,13 +2,14 @@
 
 header {
   background: transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.01);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.01);
   backdrop-filter: blur(2px);             
   -webkit-backdrop-filter: blur(2px);
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   transition: background 0.3s ease, box-shadow 0.3s ease;
-  position: sticky;
+  position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 1000;
 }
@@ -109,7 +110,7 @@ header:hover a {
 
 footer {
   background-color: transparent;
-  position: fixed;
+  position: relative;
   z-index: 1000;
   padding: 0.5rem;
   text-align: center;
