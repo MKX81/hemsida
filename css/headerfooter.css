@@ -15,6 +15,11 @@ header {
 
 header:hover {
   background: var(--light-bg);
+  color: var(--primary-green)
+}
+
+header:hover a {
+  color: var(--primary-green)
 }
 
 /* headerpunkter i kolumn */
@@ -95,7 +100,7 @@ header:hover {
 .logo-header a:hover,
 .nav-links-header a:hover,
 .menu-toggle-header:hover {
-  color: var(--primary-green);
+  color: var(--accent-yellow);
 }
 
 
