@@ -19,8 +19,8 @@
 }
 
 .hero-2 {
-  position: relative;
-  z-index: 1;
+  position: sticky;
+  top: 0;
   background-color: #333333;
 }
 
