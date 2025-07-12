@@ -20,18 +20,15 @@
 .hero-2 {
   height: 75vh;
   background-color: #333333;
-  opacity: 0;
   z-index: 2;
 }
 
 .hero-3 {
   height: 100vh;
   background-image: url("../images/gastronomy-1.jpg");
-  opacity: 0;
   z-index: 3;
-  margin-top: -75vh 
+  margin-top: -40vh 
 }
-
 
 
 /* Hero-titel (section hero-1) */
