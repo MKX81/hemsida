@@ -40,6 +40,13 @@
   position: relative;
 }
 
+.hero-5 {
+  height: 100vh;
+  background-color: #E3DED8;
+  z-index: 3;
+  position: relative;
+}
+
 /* Hero-titel (section hero-1) */
 
 .hero-title {
