@@ -21,7 +21,7 @@
 .hero-2 {
   position: sticky;
   top: 0;
-  background-color: #333333;
+  background-image: url("../images/rooms/hotel-room-1.jpg");
 }
 
 /* Hero 3 sticky */
