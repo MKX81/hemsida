@@ -31,7 +31,6 @@
   font-size: 1.1rem;
   line-height: 1.6;
   color: #333;
-  border: blue;
 }
 
 
@@ -42,7 +41,6 @@
   width:80%;
   margin: 1rem auto;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  border: blue;
 }
 
 form {
