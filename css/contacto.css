@@ -1,27 +1,27 @@
 /* Gemensamma stilar */
 
-.kontakt-info h1,
-.kontakt-wrapper h1 {
+.contato-info h1,
+.contato-wrapper h1 {
   text-align: center;
   margin-bottom: 1.5rem;
   color: #1F382B;
 }
 
 
-.kontakt-info p,
-.kontakt-wrapper p {
+.contato-info p,
+.contato-wrapper p {
   margin: 0.3rem 0;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.kontakt-info i,
-.kontakt-wrapper i {
+.contato-info i,
+.contato-wrapper i {
   color: #1F382B;
 }
 
-.kontakt-info {
+.contato-info {
   background: rgba(255, 255, 255, 0.85);
   padding: 1rem;
   border-radius: 15px;
@@ -34,7 +34,7 @@
 }
 
 
-.kontakt-wrapper {
+.contato-wrapper {
   background: rgba(255, 255, 255, 0.85);
   padding: 0.5rem;
   border-radius: 15px;
