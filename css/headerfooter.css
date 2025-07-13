@@ -47,13 +47,6 @@ header:hover a {
   color: #F5F1EC;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-
-.logo-header a:hover {
-  color: var(--accent-yellow);  
-  transition: color 0.3s ease;
 }
 
 .nav-links-header {
