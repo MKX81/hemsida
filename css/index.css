@@ -103,6 +103,96 @@
   padding: 1rem;
 }
 
+/*Kontaktinformation*/
+
+.contato-info h1,
+.contato-wrapper h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1F382B;
+}
+
+
+.contato-info p,
+.contato-wrapper p {
+  margin: 0.3rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contato-info i,
+.contato-wrapper i {
+  color: #1F382B;
+}
+
+.contato-info {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 1rem;
+  border-radius: 15px;
+  width: 20%;
+  margin: 1rem auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  border: 1px blue; 
+}
+
+/*Kontaktformulär*/
+
+.contato-wrapper {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 0.5rem;
+  border-radius: 15px;
+  width:40%;
+  margin: 1rem auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, textarea {
+  padding: 0.2rem;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+button {
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  font-family: inherit;
+  background-color: #4F7C63;
+  color: #F5F1EC;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1F382B;
+}
+
+.feedback {
+  margin: 0.5rem;
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: bold;
+  color: #A24C3D;
+}
+
 /* Gemensamma Titlar och knappar */
 .title-h1 {
   margin: 0;
