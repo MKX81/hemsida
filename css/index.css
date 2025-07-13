@@ -101,12 +101,6 @@
   padding: 2rem;
 }
 
-.contato-info,
-.contato-wrapper {
-  flex: 1 1 300px;
-  max-width: 500px;
-}
-
 /* Gemensamma Titlar och knappar */
 .title-h1 {
   margin: 0;
