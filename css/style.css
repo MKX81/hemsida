@@ -83,6 +83,46 @@ main {
   cursor: pointer;
 }
 
+/*COOKIE-POPUP*/
+.cookie-popup {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  z-index: 9999;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  font-size: 0.95rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cookie-popup button {
+  background-color: #4F7C63;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cookie-popup button:hover {
+  background-color: #1F382B;
+}
+
+.cookie-popup.hidden {
+  display: none;
+}
+
+
 /* Info-banner högst upp, klickbar för att stänga */
 .info-banner {
   position: fixed;
