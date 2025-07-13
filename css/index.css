@@ -40,13 +40,22 @@
   background-color: #333333;
 }
 
-/* Hero 5 sticky med högre z-index än hero-4 */
-.hero-5 {
+/* Contato */
+.hero-contato {
   min-height: 100vh; 
   position: sticky;
   top: 0;
   z-index: 4;
   background-color: #E3DED8;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  height: 100vh;
 }
 
 .contato-title {
