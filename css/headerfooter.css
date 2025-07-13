@@ -115,6 +115,7 @@ footer {
   padding: 0.5rem;
   text-align: center;
   margin-top: 10rem;
+  border: 2px solid blue;
 }
 
 /* Social icons i footer */
