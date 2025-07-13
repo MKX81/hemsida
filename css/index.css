@@ -64,8 +64,7 @@
 }
 
 /* Contato */
-.hero-contato {
-  width: 100%; 
+.hero-contato { 
   height: 100vh;
   min-height: 100vh; 
   position: sticky;
@@ -95,6 +94,7 @@
 }
 
 .contato-container {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
