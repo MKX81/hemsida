@@ -128,3 +128,12 @@ function showPopup() {
     popupOverlay.classList.add("active");
   }
 }
+// COOKIES
+  if (!localStorage.getItem("cookieConsent")) {
+    document.getElementById("cookie-popup").classList.remove("hidden");
+  }
+
+  document.getElementById("accept-cookies").addEventListener("click", function () {
+    localStorage.setItem("cookieConsent", "true");
+    document.getElementById("cookie-popup").classList.add("hidden");
+  });
