@@ -1,4 +1,4 @@
-/* Gemensamma hero-inställningar */
+/* HERO */
 .hero {
   background-size: cover;
   background-position: center;
@@ -93,8 +93,8 @@
   max-width: 100%;
 }
 
-/* Titlar och knappar */
-.hero-title {
+/* Gemensamma Titlar och knappar */
+.title-h1 {
   margin: 0;
   font-size: 2rem;
   font-weight: 800;
@@ -105,7 +105,7 @@
   max-width: 100%;
 }
 
-.hero-sub-title {
+.title-h2 {
   margin: 0;
   font-size: 1.5rem;
   font-weight: 600;
@@ -116,7 +116,7 @@
   max-width: 90%;
 }
 
-.book-now-button {
+.general-button {
   display: block;
   background-color: transparent;
   color: #F5F1EC;
@@ -134,7 +134,7 @@
   border-radius: 10px;
 }
 
-.book-now-button:hover {
+.general-button:hover {
   color: var(--accent-yellow);
   border-color: var(--accent-yellow);
   backdrop-filter: blur(2px);
