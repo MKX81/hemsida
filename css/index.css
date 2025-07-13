@@ -95,6 +95,7 @@
 
 .contato-container {
   width: 100%;
+  min-width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
