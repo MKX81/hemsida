@@ -58,14 +58,8 @@ header:hover a {
   bottom: -4px;              
   width: 100%;
   height: 2px;
-  background-color: var(--accent-yellow);  
-  transform: scaleX(0);    
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.logo-header a:hover::after {
-  transform: scaleX(1);    
+  color: var(--accent-yellow);  
+  transition: color 0.3s ease;
 }
 
 .nav-links-header {
